@@ -3,6 +3,8 @@ import Sidebar from './Components/Sidebar';
 import LoadingSpinner from './Components/LoadingSpinner'; // Adjust paths if necessary
 import './App.css'; // Your main CSS file
 import Home from './Pages/Home';
+import About from './Pages/About';
+import Projects from './Pages/Projects';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -33,14 +35,12 @@ const App = () => {
 
             {/* About Section */}
             <section id="about" className="section">
-              <h1>About</h1>
-              <p>This is the About section where you can learn more about me.</p>
+             <About/>
             </section>
 
             {/* Projects Section */}
             <section id="projects" className="section">
-              <h1>Projects</h1>
-              <p>Here are some of my featured projects.</p>
+              <Projects/>
             </section>
 
             {/* Skills Section */}

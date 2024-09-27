@@ -2,7 +2,7 @@
   margin: 0 ;
   padding: 0;
   text-align: center;
-}
+  }
 
 .logo {
   height: 6em;
@@ -72,39 +72,58 @@ html {
 
 
 .section {
-  padding-left: 5%;
-  padding-top: 2%;
+  padding-left: 0%;
   margin: 0;
   height: 100vh; /* Make each section take up the full viewport height */
   
 }
 
-#home {
-  background-color: #f0f0f0;
-  margin-left: 5px;
 
+#home {
+  
+  margin-left: 5%;
+  color: #b0b0b0;
+  background: linear-gradient(-45deg, #011e19,#214131,#102e23, #31543f);
+  background-size: 600% 600%;
+  animation: gradient 30s ease infinite;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+ 
 #about {
-  background-color: #e0e0e0;
+  margin-left: 10%;
+  background-color: #425953;
 }
 
 #projects {
-  background-color: #d0d0d0;
+  background-color: #31543F;
 }
 
 #skills {
-  background-color: #c0c0c0;
+  background-color: #425953;
 }
 
 #resume {
-  background-color: #b0b0b0;
+  background-color: #31543F;
 }
 
 #contact {
-  background-color: #a0a0a0;
+  background-color: #425953;
 }
 
 .divSection{
   flex-direction: column;
 }
+
+
+
