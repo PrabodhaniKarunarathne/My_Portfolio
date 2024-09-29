@@ -80,8 +80,8 @@ html {
 
 
 #home {
-  
-  margin-left: 5%;
+  padding-top: 3%;
+  margin-left: 0%;
   color: #b0b0b0;
   background: linear-gradient(-45deg, #011e19,#214131,#102e23, #31543f);
   background-size: 600% 600%;
@@ -101,29 +101,45 @@ html {
 }
  
 #about {
-  margin-left: 10%;
-  background-color: #425953;
+  /* padding-top: 5%; */
+  margin-left: 0%;
+  background-color: #294B38;
 }
 
 #projects {
+  /* padding-top: 5%; */
   background-color: #31543F;
 }
 
 #skills {
-  background-color: #425953;
+  padding-top: 5%;
+  background-color: #294B38;
 }
 
 #resume {
+  padding-top: 5%;
   background-color: #31543F;
 }
 
 #contact {
-  background-color: #425953;
+  padding-top: 5%;
+  background-color: #294B38;
 }
 
 .divSection{
   flex-direction: column;
 }
 
+/* src/index.css or src/App.css */
+@keyframes parallaxAnimation {
+  100% {
+    background-position:
+      -5000px 20%,
+      -1600px 100%,
+      -1000px 50%,
+      -2000px 100%,
+      -800px 0;
+  }
+}
 
 

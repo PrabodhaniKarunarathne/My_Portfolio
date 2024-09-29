@@ -5,6 +5,10 @@ import './App.css'; // Your main CSS file
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Projects from './Pages/Projects';
+import Navbar from './Components/NavBar';
+
+
+
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -24,7 +28,7 @@ const App = () => {
         <>
         <div className="divSection">
         <div>
-          <Sidebar />
+          <Sidebar/>
         </div>
         <div >
           <main>
@@ -45,8 +49,7 @@ const App = () => {
 
             {/* Skills Section */}
             <section id="skills" className="section">
-              <h1>Skills</h1>
-              <p>These are the skills I have acquired over the years.</p>
+            
             </section>
 
             {/* Resume Section */}
