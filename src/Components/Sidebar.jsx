@@ -9,7 +9,7 @@ const Navbar = () => {
       <nav
         className="navbar navbar-expand-lg navbar-dark"
         style={{
-          background: "linear-gradient(90deg, #31543F, #214131)", // Gradient background
+          background: "linear-gradient(90deg, #31543F, #011E19)", // Gradient background
           position: "fixed",
           top: 0,
           width: "100%",

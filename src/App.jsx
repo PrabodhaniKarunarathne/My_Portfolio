@@ -4,8 +4,12 @@ import LoadingSpinner from './Components/LoadingSpinner'; // Adjust paths if nec
 import './App.css'; // Your main CSS file
 import Home from './Pages/Home';
 import About from './Pages/About';
+// import Projects from './Pages/Projects';
+// import Navbar from './Components/NavBar';
+import Skills from './Pages/Skills';
+import Contact from './Pages/Contact';
 import Projects from './Pages/Projects';
-import Navbar from './Components/NavBar';
+import AnimatedBox from './Components/AnimatedBox';
 
 
 
@@ -44,24 +48,22 @@ const App = () => {
 
             {/* Projects Section */}
             <section id="projects" className="section">
-              <Projects/>
+              <Projects/> 
             </section>
 
             {/* Skills Section */}
             <section id="skills" className="section">
-            
+            <Skills/>
             </section>
 
             {/* Resume Section */}
             <section id="resume" className="section">
-              <h1>Resume</h1>
-              <p>Check out my resume to learn more about my experience.</p>
+              <AnimatedBox/>
             </section>
 
             {/* Contact Section */}
             <section id="contact" className="section">
-              <h1>Contact</h1>
-              <p>Get in touch with me here!</p>
+              <Contact/>
             </section>
           </main>
           </div>

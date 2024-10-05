@@ -1,35 +1,57 @@
-// // src/pages/About.jsx
-// import React from 'react';
-// import ParallaxBackground from '../Components/ParallaxBackground'; // Import the parallax component
-
-// const About = () => {
-//   return (
-//     <>
-//       <ParallaxBackground /> {/* Insert the parallax background */}
-      
-//         </>
-//   );
-// };
-
-// export default About;
-
-
 import React from 'react';
-import ParallaxBackground from '../Components/ParallaxBackground'; // Import the parallax component
-
 
 const About = () => {
-  return (
-    <div className="overflow-hidden">
-      <ParallaxBackground />
+  const containerStyle = {
+    height: '100vh',
+    backgroundColor: '#02241A',
+    position: 'relative',  // Ensure the container is relatively positioned
+    overflow: 'hidden'      // Hide overflow from the pseudo-element
+  };
 
-      {/* Main Content */}
-      <div className="container mt-5">
-        <div className="row justify-content-center align-items-center text-center">
-          <div className="col-12 col-md-8 col-lg-6">
-            
-          </div>
-        </div>
+  const contentStyle = {
+    position: 'relative',
+    zIndex: 2,  // Ensure the content stays above the background
+    height: '100vh'
+  };
+
+  const parallaxBackgroundStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundImage: `
+      url('./src/images/—Pngtree—green technology circuit_5926764.png')
+    `,
+    backgroundRepeat: 'repeat-x',
+    backgroundPosition: `
+      0 20%,
+      0 100%,
+      0 50%,
+      0 100%,
+      0 0
+    `,
+    backgroundSize: `
+      2500px,
+      800px,
+      500px 200px,
+      1000px,
+      400px 260px
+    `,
+    opacity: 0.5,  // Reduce opacity of the background image
+    animation: 'parallaxAnimation 50s infinite linear',
+    zIndex: 1  // Keep background behind the content
+  };
+
+  return (
+    <div style={containerStyle}>
+      {/* Background with reduced opacity */}
+      <div style={parallaxBackgroundStyle}></div>
+      
+      {/* Content of the section */}
+      <div className="container d-flex flex-column justify-content-center align-items-center text-white" style={contentStyle}>
+        <h1>Welcome to the About Page</h1>
+        <p>This section has a parallax background animation.</p>
       </div>
     </div>
   );

@@ -1,12 +1,9 @@
 import React from 'react';
-// import StarBackground from '../Components/StarBackground'; // Import the starry background
+
 
 const Home = () => {
   return (
-    <div>
-      {/* Starry Background */}
-      {/* <StarBackground /> */}
-
+    <div className="infinity">
       {/* Main Content */}
       <div className="container mt-5">
         <div className="row justify-content-center align-items-center text-center">
@@ -20,6 +17,7 @@ const Home = () => {
             <button className="btn btn-primary btn-lg mt-3 animate__animated animate__bounceIn">
               Get Started
             </button>
+            
           </div>
         </div>
       </div>

@@ -1,37 +1,140 @@
-import React from "react";
-import { FaReact, FaNodeJs, FaJs, FaGitAlt } from "react-icons/fa";  // Importing icons
-import { SiBootstrap, SiVite, SiHtml5, SiCss3 } from "react-icons/si";
-
-import './Projects.css';  // Custom styles
+import React, { useState, useEffect } from 'react';
+import './Projects.css'; // Import custom CSS for animations
 
 const Projects = () => {
-    return (
-        <div className="leaves_animation">
-            {/* First set of leaves */}
-            <div className="leaf">
-            <div><FaReact size={75} color="#61DBFB" /></div>
-                <div><FaNodeJs size={75} color="#339933" /></div>
-                <div><FaJs size={75} color="#F7DF1E" /></div>
-                <div><SiBootstrap size={75} color="#7952B3" /></div>
-                <div><SiVite size={75} color="#646CFF" /></div>
-                <div><FaGitAlt size={75} color="#F1502F" /></div>
-                <div><SiHtml5 size={75} color="#E34F26" /></div>
-            </div>
+  const cardData = [
+    { imgSrc: 'your-carousel-image-1', title: 'Card 1 Title', text: 'This is the first card of the carousel.' },
+    { imgSrc: 'your-carousel-image-2', title: 'Card 2 Title', text: 'This is the second card of the carousel.' },
+    { imgSrc: 'your-carousel-image-3', title: 'Card 3 Title', text: 'This is the third card of the carousel.' },
+    { imgSrc: 'your-carousel-image-4', title: 'Card 4 Title', text: 'This is the fourth card of the carousel.' },
+    { imgSrc: 'your-carousel-image-5', title: 'Card 5 Title', text: 'This is the fifth card of the carousel.' },
+    { imgSrc: 'your-carousel-image-6', title: 'Card 6 Title', text: 'This is the sixth card of the carousel.' },
+    { imgSrc: 'your-carousel-image-7', title: 'Card 7 Title', text: 'This is the seventh card of the carousel.' },
+    { imgSrc: 'your-carousel-image-8', title: 'Card 8 Title', text: 'This is the eighth card of the carousel.' },
+    { imgSrc: 'your-carousel-image-9', title: 'Card 9 Title', text: 'This is the ninth card of the carousel.' },
+    { imgSrc: 'your-carousel-image-10', title: 'Card 10 Title', text: 'This is the tenth card of the carousel.' },
+    { imgSrc: 'your-carousel-image-11', title: 'Card 11 Title', text: 'This is the eleventh card of the carousel.' },
+    { imgSrc: 'your-carousel-image-12', title: 'Card 12 Title', text: 'This is the twelfth card of the carousel.' },
+  ];
 
-            {/* Rotated set of leaves */}
-            <div className="leaf leaf1">
-                <div><img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px" alt="Autumn Leaf 1" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px" alt="Autumn Leaf 2" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" alt="Autumn Leaf 3" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px" alt="Green Leaf" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px" alt="Falling Leaf" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px" alt="Realistic Leaf" /></div>
-                <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px" alt="Autumn Leaf" /></div>
-            </div>
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 3;
+  const [animationDirection, setAnimationDirection] = useState('');
 
-            
-        </div>
-    );
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = cardData.slice(indexOfFirstCard, indexOfLastCard);
+
+  const totalPages = Math.ceil(cardData.length / cardsPerPage);
+
+  // useEffect to reset the animation direction after the animation is done
+  useEffect(() => {
+    const resetAnimation = () => {
+      setAnimationDirection(''); // Reset the animation after it finishes
+    };
+
+    const cardsContainer = document.querySelector('.card-container');
+    if (cardsContainer) {
+      cardsContainer.addEventListener('animationend', resetAnimation);
+    }
+
+    return () => {
+      if (cardsContainer) {
+        cardsContainer.removeEventListener('animationend', resetAnimation);
+      }
+    };
+  }, [currentPage]);
+
+  const changePage = (newPage, direction) => {
+    if (newPage === currentPage) return; // No need to change if it's the same page
+    setAnimationDirection(direction);
+    setCurrentPage(newPage);
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      changePage(currentPage + 1, 'slide-left');
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      changePage(currentPage - 1, 'slide-right');
+    }
+  };
+
+  const handlePageClick = (pageNumber) => {
+    if (pageNumber > currentPage) {
+      changePage(pageNumber, 'slide-left');
+    } else if (pageNumber < currentPage) {
+      changePage(pageNumber, 'slide-right');
+    }
+  };
+
+  return (
+    <div className="container mt-5">
+      {/* Card Container with Animation */}
+      <div className={`row row-cols-1 row-cols-md-3 g-4 card-container ${animationDirection}`}>
+        {currentCards.map((card, index) => (
+          <div className="col" key={index}>
+            <div
+              className="card h-100 border-success"
+              style={{
+                backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                borderRadius: '0.5rem',
+                borderWidth: '2px',
+                height: '500px',
+              }}
+            >
+              <img src={card.imgSrc} className="card-img-top" alt={card.title} />
+              <div className="card-body">
+                <h5 className="card-title text-success">{card.title}</h5>
+                <p className="card-text">{card.text}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Pagination Controls */}
+      <nav aria-label="Card Pagination">
+        <ul className="pagination justify-content-center mt-4">
+          <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+            <button
+              className="page-link"
+              style={{ backgroundColor: 'green', color: 'white' }}
+              onClick={handlePrevPage}
+            >
+              Previous
+            </button>
+          </li>
+          {Array.from({ length: totalPages }, (_, idx) => (
+            <li key={idx + 1} className={`page-item ${currentPage === idx + 1 ? 'active' : ''}`}>
+              <button
+                className="page-link"
+                style={{
+                  backgroundColor: currentPage === idx + 1 ? 'green' : '',
+                  color: currentPage === idx + 1 ? 'white' : 'green',
+                }}
+                onClick={() => handlePageClick(idx + 1)}
+              >
+                {idx + 1}
+              </button>
+            </li>
+          ))}
+          <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+            <button
+              className="page-link"
+              style={{ backgroundColor: 'green', color: 'white' }}
+              onClick={handleNextPage}
+            >
+              Next
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 };
 
 export default Projects;
