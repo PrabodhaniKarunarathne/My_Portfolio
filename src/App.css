@@ -2,7 +2,19 @@
   margin: 0 ;
   padding: 0;
   text-align: center;
+  
   }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  
 
 .logo {
   height: 6em;
@@ -79,27 +91,6 @@ html {
 }
 
 
-/* #home {
-  padding-top: 3%;
-  margin-left: 0%;
-  color: #b0b0b0;
-  background: linear-gradient(-45deg, #011e19,#214131,#102e23, #31543f);
-  background-size: 600% 600%;
-  animation: gradient 30s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-} */
-
 #home{
   height: 100vh;
   overflow: hidden; 
@@ -107,8 +98,8 @@ html {
   background: 
     /* radial-gradient(circle at bottom, #558767, transparent 10%), */
     radial-gradient(circle at left, #558767, transparent 30%),    
-    linear-gradient(to top, #02241A 0%, transparent 70%),    
-    linear-gradient(to bottom, transparent, #011E19 70%),
+    linear-gradient(to top, #02201A 0%, transparent 70%),    
+    linear-gradient(to bottom, transparent, #02201A 70%),
     #266441;   
   animation: bg 30s infinite;
   
@@ -126,28 +117,31 @@ html {
 #about {
   /* padding-top: 5%; */
   margin-left: 0%;
-  background-color: #011E19;
+  background-color: #02201A;
 }
 
-#projects {
-   padding-top: 5%; 
-  background-color: #021F1A;
-}
 
 #skills {
   /* padding-top: 5%; */
   background-color: #02201A;
 }
 
+#projects {
+  padding-top: 1%; 
+ background-color: #02201A;
+}
+
+
 #resume {
   /* padding-top: 5%; */
-  background-color: #02211A;
+  background-color: #02201A;
 }
 
 #contact {
   padding-top: 1%;
-  padding-bottom: 1%;
-  background-color: #02231A;
+  
+  background-color:#02201A;
+  margin-bottom: 10%;
 }
 
 .divSection{
@@ -167,3 +161,11 @@ html {
 }
 
 
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  text-align: center;
+  background: #02201A;
+}

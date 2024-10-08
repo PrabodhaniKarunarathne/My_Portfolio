@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import './AnimatedBox.css';
+import './Resume.css';
 
-const CanvasAnimation = () => {
+const Resume = () => {
   const canvasRef = useRef(null);
   let w = window.innerWidth,
     h = window.innerHeight,
@@ -12,7 +12,7 @@ const CanvasAnimation = () => {
     size = 7,
     speed = 5,
     parts = new Array(),
-    colors = ['red', '#f57900', 'yellow', '#ce5c00', '#5c3566'];
+    colors = ['#84A98C', '#558767', '#266441', '#31543F', '#CAD2C5'];
   const mouse = { x: 0, y: 0 };
 
   useEffect(() => {
@@ -86,7 +86,23 @@ const CanvasAnimation = () => {
     };
   }, [arc, colors, speed]);
 
-  return <canvas ref={canvasRef} id="test" />;
+  return (
+    <div className="resume-container">
+      {/* Download CV button */}
+      <div className="download-button">
+        <a
+          href="/my_resume.pdf" // Change the file path to where your resume is located
+          download="My_Resume.pdf" // Download attribute to download the file
+          className="btn"
+        >
+          Download CV
+        </a>
+      </div>
+
+      {/* Canvas for background animation */}
+      <canvas ref={canvasRef} id="background-canvas" />
+    </div>
+  );
 };
 
-export default CanvasAnimation;
+export default Resume;

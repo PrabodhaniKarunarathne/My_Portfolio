@@ -27,10 +27,9 @@ const Projects = () => {
 
   const totalPages = Math.ceil(cardData.length / cardsPerPage);
 
-  // useEffect to reset the animation direction after the animation is done
   useEffect(() => {
     const resetAnimation = () => {
-      setAnimationDirection(''); // Reset the animation after it finishes
+      setAnimationDirection('');
     };
 
     const cardsContainer = document.querySelector('.card-container');
@@ -46,7 +45,7 @@ const Projects = () => {
   }, [currentPage]);
 
   const changePage = (newPage, direction) => {
-    if (newPage === currentPage) return; // No need to change if it's the same page
+    if (newPage === currentPage) return;
     setAnimationDirection(direction);
     setCurrentPage(newPage);
   };
@@ -77,19 +76,42 @@ const Projects = () => {
       <div className={`row row-cols-1 row-cols-md-3 g-4 card-container ${animationDirection}`}>
         {currentCards.map((card, index) => (
           <div className="col" key={index}>
-            <div
-              className="card h-100 border-success"
-              style={{
-                backgroundColor: 'rgba(40, 167, 69, 0.1)',
-                borderRadius: '0.5rem',
-                borderWidth: '2px',
-                height: '500px',
-              }}
-            >
-              <img src={card.imgSrc} className="card-img-top" alt={card.title} />
-              <div className="card-body">
-                <h5 className="card-title text-success">{card.title}</h5>
-                <p className="card-text">{card.text}</p>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                {/* Front of the card */}
+                <div className="flip-card-front">
+                  <div
+                    className="card h-100 border-success"
+                    style={{
+                      backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                      borderRadius: '0.5rem',
+                      borderWidth: '2px',
+                      height: '500px',
+                    }}
+                  >
+                    <img src={card.imgSrc} className="card-img-top" alt={card.title} />
+                    <div className="card-body">
+                      <h5 className="card-title text-success">{card.title}</h5>
+                    </div>
+                  </div>
+                </div>
+                {/* Back of the card */}
+                <div className="flip-card-back">
+                  <div
+                    className="card h-100 border-success"
+                    style={{
+                      backgroundColor: 'rgba(40, 167, 69, 0.3)',
+                      borderRadius: '0.5rem',
+                      borderWidth: '2px',
+                      height: '500px',
+                    }}
+                  >
+                    <div className="card-body">
+                      <h5 className="card-title text-white">{card.title}</h5>
+                      <p className="card-text">{card.text}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,0 +1,14 @@
+.contact-form {
+    max-width: 100%;
+  }
+  
+  .alert {
+    max-width: 100%; /* Ensure that alerts don't cause overflow */
+    word-wrap: break-word;
+  }
+
+  .footer{
+    align-items: center;
+  }
+
+ 

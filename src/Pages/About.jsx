@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
   const containerStyle = {
     height: '100vh',
-    backgroundColor: '#02241A',
+    backgroundColor: '#02201A',
     position: 'relative',  // Ensure the container is relatively positioned
     overflow: 'hidden'      // Hide overflow from the pseudo-element
   };

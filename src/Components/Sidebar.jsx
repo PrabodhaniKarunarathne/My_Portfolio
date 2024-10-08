@@ -1,28 +1,29 @@
-// src/Navbar.jsx
 import React from "react";
-// import logo from './path-to-your-logo.png'; // Add your logo path
-// import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap icons
 
 const Navbar = () => {
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault(); // Prevent default anchor click behavior
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg navbar-dark"
+        className="navbar navbar-expand-lg navbar-dark border border-#011E19 rounded text-align-center"
         style={{
           background: "linear-gradient(90deg, #31543F, #011E19)", // Gradient background
           position: "fixed",
-          top: 0,
-          width: "100%",
+          top: 5,
+          left:'5%',
+          width: "90%",
           zIndex: "1000",
+          border:'12px'
         }}
       >
         <div className="container-fluid">
-          {/* Logo */}
-          {/* <a className="navbar-brand" href="#home">
-            <img src={logo} alt="Logo" width="40" height="40" className="d-inline-block align-text-top" />
-            MyPortfolio
-          </a> */}
-
           {/* Toggle Button for Offcanvas */}
           <button
             className="navbar-toggler"
@@ -37,35 +38,36 @@ const Navbar = () => {
           </button>
 
           {/* Centered Nav Items */}
-          <div className="collapse navbar-collapse justify-content-center " id="navbarTogglerDemo01">
+          <div className="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
             <ul className="navbar-nav mb-2 mb-lg-0">
-              <li className="nav-item mx-3 ">
-                <a href="#home" className="nav-link text-#558767 fw-bold">
+              <li className="nav-item mx-3">
+                <a href="#home" className="nav-link text-#558767 fw-bold" onClick={(e) => scrollToSection(e, "home")}>
                   <i className="bi bi-house-door-fill me-2"></i>Home
                 </a>
               </li>
               <li className="nav-item mx-3">
-                <a href="#about" className="nav-link text-#558767 fw-bold">
+                <a href="#about" className="nav-link text-#558767 fw-bold" onClick={(e) => scrollToSection(e, "about")}>
                   <i className="bi bi-person-fill me-2"></i>About
                 </a>
               </li>
+              
               <li className="nav-item mx-3">
-                <a href="#projects" className="nav-link text-#558767 fw-bold">
-                  <i className="bi bi-briefcase-fill me-2"></i>Projects
-                </a>
-              </li>
-              <li className="nav-item mx-3">
-                <a href="#skills" className="nav-link text-#558767 fw-bold">
+                <a href="#skills" className="nav-link text-#558767 fw-bold" onClick={(e) => scrollToSection(e, "skills")}>
                   <i className="bi bi-gear-fill me-2"></i>Skills
                 </a>
               </li>
               <li className="nav-item mx-3">
-                <a href="#resume" className="nav-link text-#558767 fw-bold">
+                <a href="#projects" className="nav-link text-#558767 fw-bold" onClick={(e) => scrollToSection(e, "projects")}>
+                  <i className="bi bi-briefcase-fill me-2"></i>Projects
+                </a>
+              </li>
+              <li className="nav-item mx-3">
+                <a href="#resume" className="nav-link text-#558767 fw-bold" onClick={(e) => scrollToSection(e, "resume")}>
                   <i className="bi bi-file-earmark-text-fill me-2"></i>Resume
                 </a>
               </li>
               <li className="nav-item mx-3">
-                <a href="#contact" className="nav-link text-#558767 fw-bold">
+                <a href="#contact" className="nav-link text-#558767 fw-bold" onClick={(e) => scrollToSection(e, "contact")}>
                   <i className="bi bi-envelope-fill me-2"></i>Contact
                 </a>
               </li>
@@ -75,8 +77,7 @@ const Navbar = () => {
       </nav>
 
       {/* Offcanvas Sidebar */}
-      
-      <div className="offcanvas offcanvas-start-50 top-0" id="offcanvasSidebar" style={{background: "linear-gradient(90deg, #84A98C, #214131)"}}>
+      <div className="offcanvas offcanvas-start-50 top-0" id="offcanvasSidebar" style={{ background: "linear-gradient(90deg, #84A98C, #214131)" }}>
         <div className="offcanvas-header">
           <h6 className="offcanvas-title text-white">Menu</h6>
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -84,38 +85,37 @@ const Navbar = () => {
         <div className="offcanvas-body">
           <ul className="navbar-nav mb-1 mb-lg-0">
             <li className="nav-item mx-3">
-              <a href="#home" className="nav-link text-white fw-bold">
+              <a href="#home" className="nav-link text-white fw-bold" onClick={(e) => scrollToSection(e, "home")}>
                 <i className="bi bi-house-door-fill me-2"></i>Home
               </a>
             </li>
             <li className="nav-item mx-3">
-              <a href="#about" className="nav-link text-white fw-bold">
+              <a href="#about" className="nav-link text-white fw-bold" onClick={(e) => scrollToSection(e, "about")}>
                 <i className="bi bi-person-fill me-2"></i>About
               </a>
             </li>
             <li className="nav-item mx-3">
-              <a href="#projects" className="nav-link text-white fw-bold">
+              <a href="#projects" className="nav-link text-white fw-bold" onClick={(e) => scrollToSection(e, "projects")}>
                 <i className="bi bi-briefcase-fill me-2"></i>Projects
               </a>
             </li>
             <li className="nav-item mx-3">
-              <a href="#skills" className="nav-link text-white fw-bold">
+              <a href="#skills" className="nav-link text-white fw-bold" onClick={(e) => scrollToSection(e, "skills")}>
                 <i className="bi bi-gear-fill me-2"></i>Skills
               </a>
             </li>
             <li className="nav-item mx-3">
-              <a href="#resume" className="nav-link text-white fw-bold">
+              <a href="#resume" className="nav-link text-white fw-bold" onClick={(e) => scrollToSection(e, "resume")}>
                 <i className="bi bi-file-earmark-text-fill me-2"></i>Resume
               </a>
             </li>
             <li className="nav-item mx-3">
-              <a href="#contact" className="nav-link text-white fw-bold">
+              <a href="#contact" className="nav-link text-white fw-bold" onClick={(e) => scrollToSection(e, "contact")}>
                 <i className="bi bi-envelope-fill me-2"></i>Contact
               </a>
             </li>
           </ul>
-
-          </div>
+        </div>
       </div>
     </div>
   );
