@@ -59,7 +59,7 @@ const ContactForm = () => {
         <div className="col-12 col-md-8 mb-4 mb-md-0">
           <div className="p-4 border border-success rounded " style={{
             background: "linear-gradient(90deg, #31543F, #011E19)"}}>
-            <h3 className="text-white">Contact Us</h3>
+            <h3 className="text-white">Contact Me</h3>
             <Form onSubmit={handleSubmit(onSubmit)} className="contact-form">
               {/* Name Field */}
               <Form.Group controlId="formName" className="mb-2">
@@ -177,7 +177,7 @@ const ContactForm = () => {
         background: "linear-gradient(90deg, #102E23, #31543F)"}}>
         <footer className="footer mt-5  text-center w-100 py-4">
           <p className="text-white mb-2">Copyright © 2024 K.T.T.P. Dilhari Karunarathne</p>
-          <p className="text-white mb-4">Phone: +123-456-7890</p>
+          <p className="text-white mb-4">Phone: +94 776884107</p>
           <div className="d-flex justify-content-center">
             <a href="https://www.linkedin.com/in/prabodhani-karunarathne" className="text-white mx-2">
               <FaLinkedin size={24} />
