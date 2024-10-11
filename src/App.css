@@ -92,6 +92,7 @@ html {
 
 
 #home{
+  padding-top: 5%; 
   height: 100vh;
   overflow: hidden; 
   
@@ -115,30 +116,30 @@ html {
 
  
 #about {
-  /* padding-top: 5%; */
+  padding-top: 1%; 
   margin-left: 0%;
   background-color: #02201A;
 }
 
 
 #skills {
-  /* padding-top: 5%; */
+  padding-top: 1%; 
   background-color: #02201A;
 }
 
 #projects {
-  padding-top: 1%; 
+padding-top: 3%; 
  background-color: #02201A;
 }
 
 
 #resume {
-  /* padding-top: 5%; */
+   padding-top: 5%;
   background-color: #02201A;
 }
 
 #contact {
-  padding-top: 1%;
+  padding-top: 2%;
   
   background-color:#02201A;
   margin-bottom: 10%;

@@ -94,14 +94,15 @@ const Navbar = () => {
                 <i className="bi bi-person-fill me-2"></i>About
               </a>
             </li>
-            <li className="nav-item mx-3">
-              <a href="#projects" className="nav-link text-white fw-bold" onClick={(e) => scrollToSection(e, "projects")}>
-                <i className="bi bi-briefcase-fill me-2"></i>Projects
-              </a>
-            </li>
+            
             <li className="nav-item mx-3">
               <a href="#skills" className="nav-link text-white fw-bold" onClick={(e) => scrollToSection(e, "skills")}>
                 <i className="bi bi-gear-fill me-2"></i>Skills
+              </a>
+            </li>
+            <li className="nav-item mx-3">
+              <a href="#projects" className="nav-link text-white fw-bold" onClick={(e) => scrollToSection(e, "projects")}>
+                <i className="bi bi-briefcase-fill me-2"></i>Projects
               </a>
             </li>
             <li className="nav-item mx-3">

@@ -27,23 +27,6 @@ const Projects = () => {
 
   const totalPages = Math.ceil(cardData.length / cardsPerPage);
 
-  useEffect(() => {
-    const resetAnimation = () => {
-      setAnimationDirection('');
-    };
-
-    const cardsContainer = document.querySelector('.card-container');
-    if (cardsContainer) {
-      cardsContainer.addEventListener('animationend', resetAnimation);
-    }
-
-    return () => {
-      if (cardsContainer) {
-        cardsContainer.removeEventListener('animationend', resetAnimation);
-      }
-    };
-  }, [currentPage]);
-
   const changePage = (newPage, direction) => {
     if (newPage === currentPage) return;
     setAnimationDirection(direction);
@@ -72,7 +55,7 @@ const Projects = () => {
 
   return (
     <div className="container mt-5">
-      {/* Card Container with Animation */}
+      {/* Card Container */}
       <div className={`row row-cols-1 row-cols-md-3 g-4 card-container ${animationDirection}`}>
         {currentCards.map((card, index) => (
           <div className="col" key={index}>
@@ -81,9 +64,9 @@ const Projects = () => {
                 {/* Front of the card */}
                 <div className="flip-card-front">
                   <div
-                    className="card h-100 border-success"
+                    className="card h-100 border-success animated-border" // Add animated-border class
                     style={{
-                      backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                      backgroundColor: 'black',
                       borderRadius: '0.5rem',
                       borderWidth: '2px',
                       height: '500px',
@@ -98,7 +81,7 @@ const Projects = () => {
                 {/* Back of the card */}
                 <div className="flip-card-back">
                   <div
-                    className="card h-100 border-success"
+                    className="card h-100 border-success animated-border" // Add animated-border class
                     style={{
                       backgroundColor: 'rgba(40, 167, 69, 0.3)',
                       borderRadius: '0.5rem',

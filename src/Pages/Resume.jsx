@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import './Resume.css';
+import './Resume.css'; // Assuming the CSS is in Resume.css
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importing Bootstrap CSS
 
 const Resume = () => {
   const canvasRef = useRef(null);
@@ -76,31 +77,97 @@ const Resume = () => {
       return Math.sqrt(dx * dx + dy * dy);
     };
 
+    const handleResize = () => {
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.width = w;
+      canvas.height = h;
+    };
+
     createParticles();
     drawParticles();
 
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', handleResize);
 
+    // Cleanup to avoid side effects
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
     };
   }, [arc, colors, speed]);
 
   return (
     <div className="resume-container">
-      {/* Download CV button */}
-      <div className="download-button">
-        <a
-          href="/my_resume.pdf" // Change the file path to where your resume is located
-          download="My_Resume.pdf" // Download attribute to download the file
-          className="btn"
-        >
-          Download CV
-        </a>
-      </div>
-
       {/* Canvas for background animation */}
-      <canvas ref={canvasRef} id="background-canvas" />
+      <canvas ref={canvasRef} id="resume-background-canvas" />
+
+      <div className="container mt-5">
+        <div className="row justify-content-center">
+          {/* First Card */}
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
+            <div className="card text-center resume-card  bg-success bg-opacity-10 text-white" style={{height:'100%'}} >
+              <div className="card-body">
+                <h5 className="card-title">Special title treatment</h5>
+                <p className="card-text">
+                  With supporting text below as a natural lead-in to additional content.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Second Card */}
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
+            <div className="card text-center resume-card  bg-success bg-opacity-10 text-white" style={{height:'90%'}}>
+              <div className="card-body">
+                <h5 className="card-title">Special title treatment</h5>
+                <p className="card-text">
+                  With supporting text below as a natural lead-in to additional content.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Third Card */}
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
+          <div className="card text-center resume-card animated-border-card">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <div className="card-body">
+    <h5 className="card-title">Special title treatment</h5>
+    <p className="card-text">
+      With supporting text below as a natural lead-in to additional content.
+    </p>
+  </div>
+</div>
+
+          </div>
+
+          {/* Fourth Card */}
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
+            <div className="card text-center resume-card  bg-success bg-opacity-10 text-white" style={{height:'70%'}}>
+              <div className="card-body">
+                <h5 className="card-title">Special title treatment</h5>
+                <p className="card-text">
+                  With supporting text below as a natural lead-in to additional content.
+                </p>
+                <a
+                  href="/my_resume.pdf"
+                  download="My_Resume.pdf"
+                  className="btn "
+                  style={{ backgroundColor: '#558767', color: 'white' }} // Apply custom background color
+                onMouseOver={(e) => e.target.style.backgroundColor = '#31543F'} // Hover color change
+                onMouseOut={(e) => e.target.style.backgroundColor = '#558767'}  // Reset on hover out
+                >
+                  Download CV
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

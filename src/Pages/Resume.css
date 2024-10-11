@@ -1,57 +1,154 @@
-/* * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html, body {
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  canvas {
-    overflow: hidden;
-    /* width: 100vw;
-    height: 100vh;
-    background-color: black; */
-  /* Resume.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and margin are included in the total width and height */
+}
 
-/* Container for the resume page */
-.resume-container {
-  position: relative;
+html,
+body {
   width: 100vw;
   height: 100vh;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #02201A;
+  z-index: 1; /* Set canvas z-index lower than cards */
+}
+
+.resume-container {
+  position: relative;
+  width: 100%;
+  height: auto; /* Allow container to adjust height based on content */
   overflow: hidden;
 }
 
-/* The canvas background */
-#background-canvas {
+#resume-background-canvas {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Keep the canvas in the background */
+  z-index: 1; /* Ensure the canvas is behind the cards */
 }
 
-/* Download button */
-.download-button {
+/* Card Styles */
+.resume-card {
+  background-color: rgba(86, 180, 120, 0.2);
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+  z-index: 2; /* Ensure the cards are on top of the canvas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+.resume-card:hover {
+  transform: scale(1.05);
+}
+
+/* Conic-gradient border animation */
+.animated-border {
+  border: 0.35rem solid;
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+  animation: borderRotate 5000ms linear infinite forwards;
+}
+
+/* Radial-gradient border animation */
+.animated-radial-border {
+  border: 0.35rem solid;
+  border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+  animation: borderRadial 5000ms linear infinite forwards;
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+
+@keyframes borderRadial {
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .resume-card {
+    min-height: 200px; /* Set minimum height for cards on small screens */
+  }
+}
+
+
+/* General Styles */
+.animated-border-card {
+  position: relative;
+  background: #111845a6; /* Background of the card */
+  color: white; /* Text color */
+  padding: 20px; /* Padding inside the card */
+  border: none; /* No default border */
+  overflow: hidden; /* Ensure border animations don't overflow outside */
+  box-shadow: 0 20px 50px rgba(23, 32, 90, 0.5); /* Shadow for the card */
+}
+
+/* Each span represents one edge of the card */
+.animated-border-card span {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 2; /* Keep the button above the canvas */
+  background: #50dfdb; /* Border color */
+  animation: animate-border 4s linear infinite; /* Apply the border animation */
 }
 
-/* .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-} */
+/* Top border */
+.animated-border-card span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: left; /* Animation starts from the left */
+}
 
-.btn:hover {
-  background-color: #0056b3;
+/* Right border */
+.animated-border-card span:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  transform-origin: top; /* Animation starts from the top */
+}
+
+/* Bottom border */
+.animated-border-card span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: right; /* Animation starts from the right */
+}
+
+/* Left border */
+.animated-border-card span:nth-child(4) {
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  transform-origin: bottom; /* Animation starts from the bottom */
+}
+
+/* The border animation applied to all edges */
+@keyframes animate-border {
+  0% {
+    transform: scale(0); /* Start from 0 (invisible) */
+  }
+  50% {
+    transform: scale(1); /* Grow to full size (visible) */
+  }
+  100% {
+    transform: scale(0); /* Shrink back to 0 (invisible) */
+  }
 }
