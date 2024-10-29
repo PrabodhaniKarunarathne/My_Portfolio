@@ -58,7 +58,7 @@ const ContactForm = () => {
         {/* Contact Form */}
         <div className="col-12 col-md-8 mb-4 mb-md-0">
           <div className="p-4 border border-success rounded " style={{
-            background: "linear-gradient(90deg, #31543F, #011E19)"}}>
+            background: "linear-gradient(90deg, #0B525B, #272640)"}}>
             <h3 className="text-white">Contact Me</h3>
             <Form onSubmit={handleSubmit(onSubmit)} className="contact-form">
               {/* Name Field */}
@@ -174,7 +174,7 @@ const ContactForm = () => {
 
       {/* Footer Section */}
       <div className="justify-content-center mt-5  w-100" style={{
-        background: "linear-gradient(90deg, #102E23, #31543F)"}}>
+        background: "linear-gradient(90deg, #4D194D, #006466)"}}>
         <footer className="footer mt-5  text-center w-100 py-4">
           <p className="text-white mb-2">Copyright © 2024 K.T.T.P. Dilhari Karunarathne</p>
           <p className="text-white mb-4">Phone: +94 776884107</p>

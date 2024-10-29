@@ -98,67 +98,58 @@ html {
   
   background: 
     /* radial-gradient(circle at bottom, #558767, transparent 10%), */
-    radial-gradient(circle at left, #558767, transparent 30%),    
-    linear-gradient(to top, #02201A 0%, transparent 70%),    
-    linear-gradient(to bottom, transparent, #02201A 70%),
-    #266441;   
-  animation: bg 30s infinite;
+    radial-gradient(circle at left, #2F2B7D, transparent 30%),    
+    linear-gradient(to top, #02011E 0%, transparent 70%),    
+    linear-gradient(to bottom, transparent, #040324 70%),
+    #05042A;   
+  animation: bg 20s infinite;
   
 
 }
 
 @keyframes bg {
-  0%, 100% { background-color: #31543F; } 
-  25% { background-color: #102E23; }      
-  50% { background-color: #266441; }     
-  75% { background-color: #022A1B; }      
+  0%, 100% { background-color: #131146; } 
+  25% { background-color: #2F2B7D; }      
+  50% { background-color: #0C0B38; }     
+  /* 75% { background-color: #1A1854; }       */
 }
 
  
 #about {
-  padding-top: 1%; 
+ 
   margin-left: 0%;
-  background-color: #02201A;
+  background-color: #02011E;
+  
+ 
 }
+
 
 
 #skills {
-  padding-top: 1%; 
-  background-color: #02201A;
+ 
+  background-color: #02011E;
 }
 
 #projects {
-padding-top: 3%; 
- background-color: #02201A;
+
+ background-color: #02011E;
 }
 
 
 #resume {
-   padding-top: 5%;
-  background-color: #02201A;
+   
+  background-color: #02011E;
 }
 
 #contact {
-  padding-top: 2%;
+ 
   
-  background-color:#02201A;
+  background-color:#02011E;
   margin-bottom: 10%;
 }
 
 .divSection{
   flex-direction: column;
-}
-
-/* src/index.css or src/App.css */
-@keyframes parallaxAnimation {
-  100% {
-    background-position:
-      -5000px 20%,
-      -1600px 100%,
-      -1000px 50%,
-      -2000px 100%,
-      -800px 0;
-  }
 }
 
 
@@ -168,5 +159,5 @@ html, body, #root {
   height: 100%; /* Ensure full height */
   overflow-x: hidden; /* Prevent horizontal scroll */
   text-align: center;
-  background: #02201A;
+  background: #02011E;
 }

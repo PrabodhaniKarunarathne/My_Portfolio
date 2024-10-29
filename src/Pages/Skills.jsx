@@ -5,9 +5,38 @@ import { SiBootstrap, SiVite, SiHtml5, SiCss3 } from "react-icons/si";
 import './Skills.css';  // Custom styles
 
 const Skills = () => {
+    const parallaxBackgroundStyle = {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundImage: `
+          url('./src/images/—Pngtree—blue network data globe_4869747.png')
+        `,
+        backgroundRepeat: 'repeat-x',
+        backgroundPosition: `
+          0 20%,
+          0 100%,
+          0 50%,
+          0 100%,
+          0 0
+        `,
+        backgroundSize: `
+          700px,
+          800px,
+          500px 200px,
+          1000px,
+          400px 260px
+        `,
+        opacity: 0.5,  // Reduce opacity of the background image
+        animation: 'parallaxAnimation 10s infinite linear',
+        zIndex: 1  // Keep background behind the content
+      };
     return (
-        <div className="leaves_animation">
+        <div className="leaves_animation" >
             {/* First set of leaves */}
+            <div style={parallaxBackgroundStyle}></div>
             <div className="leaf">
             <div><FaReact size={75} color="#61DBFB" /></div>
                 <div><FaNodeJs size={75} color="#339933" /></div>

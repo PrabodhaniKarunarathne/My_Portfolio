@@ -14,8 +14,9 @@ const Navbar = () => {
       <nav
         className="navbar navbar-expand-lg navbar-dark border border-#011E19 rounded text-align-center"
         style={{
-          background: "linear-gradient(90deg, #31543F, #011E19)", // Gradient background
+          background: "linear-gradient(90deg,#2F2B7D, #040324 )", // Gradient background
           position: "fixed",
+          opacity:0.9,
           top: 5,
           left:'5%',
           width: "90%",
@@ -77,7 +78,7 @@ const Navbar = () => {
       </nav>
 
       {/* Offcanvas Sidebar */}
-      <div className="offcanvas offcanvas-start-50 top-0" id="offcanvasSidebar" style={{ background: "linear-gradient(90deg, #84A98C, #214131)" }}>
+      <div className="offcanvas offcanvas-start-50 top-0" id="offcanvasSidebar" style={{ background: "linear-gradient(90deg, #4E4AA1, #02011E)" }}>
         <div className="offcanvas-header">
           <h6 className="offcanvas-title text-white">Menu</h6>
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

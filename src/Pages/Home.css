@@ -1,0 +1,20 @@
+.background-image-opacity {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .background-image-opacity::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/—Pngtree—technology network digital diagram geometric_9000623.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Adjust opacity here */
+    z-index: -1;
+    border-radius: inherit; /* Keeps the border-radius of the container */
+  }
+  

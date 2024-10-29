@@ -13,7 +13,7 @@ const Resume = () => {
     size = 7,
     speed = 5,
     parts = new Array(),
-    colors = ['#84A98C', '#558767', '#266441', '#31543F', '#CAD2C5'];
+    colors = ['#1B3A4B', '#212F45', '#144552', '#272640', '#312244'];
   const mouse = { x: 0, y: 0 };
 
   useEffect(() => {
@@ -106,7 +106,11 @@ const Resume = () => {
         <div className="row justify-content-center">
           {/* First Card */}
           <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
-            <div className="card text-center resume-card  bg-success bg-opacity-10 text-white" style={{height:'100%'}} >
+            <div className="card  animated-border-card text-center resume-card   bg-opacity-10 text-white h-100"  >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
               <div className="card-body">
                 <h5 className="card-title">Special title treatment</h5>
                 <p className="card-text">
@@ -118,7 +122,11 @@ const Resume = () => {
 
           {/* Second Card */}
           <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
-            <div className="card text-center resume-card  bg-success bg-opacity-10 text-white" style={{height:'90%'}}>
+            <div className="card  animated-border-card text-center resume-card   bg-opacity-10 text-white" style={{height:'90%'}}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
               <div className="card-body">
                 <h5 className="card-title">Special title treatment</h5>
                 <p className="card-text">
@@ -129,26 +137,29 @@ const Resume = () => {
           </div>
 
           {/* Third Card */}
-          <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
-          <div className="card text-center resume-card animated-border-card">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <div className="card-body">
-    <h5 className="card-title">Special title treatment</h5>
-    <p className="card-text">
-      With supporting text below as a natural lead-in to additional content.
-    </p>
-  </div>
-</div>
-
+          {/* <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
+          <div className="card text-center resume-card animated-border-card ">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          <div className="card-body">
+            <h5 className="card-title">Special title treatment</h5>
+            <p className="card-text">
+             With supporting text below as a natural lead-in to additional content.
+            </p>
           </div>
+          </div>
+          </div> */}
 
           {/* Fourth Card */}
           <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
-            <div className="card text-center resume-card  bg-success bg-opacity-10 text-white" style={{height:'70%'}}>
-              <div className="card-body">
+            <div className="card animated-border-card  text-center resume-card   bg-opacity-10 text-white" style={{height:'70%'}}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+              <div className="card-body ">
                 <h5 className="card-title">Special title treatment</h5>
                 <p className="card-text">
                   With supporting text below as a natural lead-in to additional content.

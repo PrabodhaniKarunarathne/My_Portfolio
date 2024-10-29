@@ -1,0 +1,9 @@
+/* About.css */
+@keyframes AboutBackgroundAnimation {
+  from {
+    background-position: 0 20%;
+  }
+  to {
+    background-position: -800px 20%; /* Move background horizontally */
+  }
+}

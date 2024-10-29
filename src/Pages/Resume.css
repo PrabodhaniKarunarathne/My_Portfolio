@@ -16,7 +16,7 @@ canvas {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #02201A;
+  background-color: #02011E;
   z-index: 1; /* Set canvas z-index lower than cards */
 }
 
@@ -53,14 +53,14 @@ canvas {
 
 /* Conic-gradient border animation */
 .animated-border {
-  border: 0.35rem solid;
+  border: 0.10em solid;
   border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
   animation: borderRotate 5000ms linear infinite forwards;
 }
 
 /* Radial-gradient border animation */
 .animated-radial-border {
-  border: 0.35rem solid;
+  border: 0.15rem solid;
   border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
   animation: borderRadial 5000ms linear infinite forwards;
 }
@@ -89,12 +89,12 @@ canvas {
 /* General Styles */
 .animated-border-card {
   position: relative;
-  background: #111845a6; /* Background of the card */
+  /* background: #111845a6; Background of the card */
   color: white; /* Text color */
   padding: 20px; /* Padding inside the card */
   border: none; /* No default border */
   overflow: hidden; /* Ensure border animations don't overflow outside */
-  box-shadow: 0 20px 50px rgba(23, 32, 90, 0.5); /* Shadow for the card */
+  box-shadow: #84A98C; /* Shadow for the card */
 }
 
 /* Each span represents one edge of the card */
