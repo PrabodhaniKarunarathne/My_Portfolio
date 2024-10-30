@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './About.css';
 
-
 const About = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
@@ -22,10 +21,9 @@ const About = () => {
   const contentWrapperStyle = {
     position: 'relative',
     zIndex: 2,
-    margin: '2rem 0',
     ...(isSmallScreen && {
-      maxHeight: '100vh',  // Restrict height on small screens
-      overflowY: 'auto',  // Enable scrolling only for small screens
+      maxHeight: '100vh', 
+      overflowY: 'auto',
     }),
   };
 
@@ -38,34 +36,35 @@ const About = () => {
     backgroundImage: `url('./src/images/—Pngtree—network technology intelligence information data_4893164.png')`,
     backgroundRepeat: 'repeat-x',
     backgroundPosition: '0 20%',
-    backgroundSize: isSmallScreen ? '600px' : '700px',
+    backgroundSize: isSmallScreen ? '800px' : '700px',
     opacity: 0.5,
     zIndex: 1,
-    
-    animationName: 'AboutBackgroundAnimation', // Use the defined animation
+    animationName: 'AboutBackgroundAnimation',
     animationDuration: '10s',
     animationIterationCount: 'infinite',
-    animationTimingFunction: 'linear', // Smooth animation
+    animationTimingFunction: 'linear',
   };
-  
 
   return (
     <div style={containerStyle}>
-      {/* Background with reduced opacity */}
       <div style={AboutBackgroundStyle}></div>
-
-      {/* Scrollable Content Section on small screens */}
       <div style={contentWrapperStyle}>
         <div className="container text-white">
+          <h1 className="mt-5">Who I Am</h1>
           <div className="row justify-content-center">
+            
             {/* Column 1 - Card 1 */}
             <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mt-5">
-              <div className="card text-center  border-info bg-opacity-10 " style={{
-                 backgroundColor: 'rgba(60, 56, 152,0.5)',
-                 color:'#02011E',
+              <div className="card text-center" style={{
+                 backgroundColor: 'rgba(2, 1, 30,0.6)',
+                 color:'#4E4AA1',
                  width: '100%',
-                padding: '1.5rem',
+                 padding: '0.5rem',
+                 position: 'relative',
               }}>
+                <div className="card-overlay">
+                  <p>Explore My Education</p>
+                </div>
                 <div className="card-body">
                   <h5 style={{ textAlign: 'left' }}>
                     “With a B.Sc. from the University of Kelaniya, I’ve built a solid foundation in software engineering, developing various web and mobile applications, and engaging in group projects. I am particularly interested in full-stack development and creating user-centric solutions.”
@@ -75,59 +74,71 @@ const About = () => {
             </div>
 
             {/* Column 2 - Card 2 and Card 3 */}
-            <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mt-5">
-              <div className="card text-center  border-info bg-opacity-10  mb-3" style={{
-                backgroundColor: 'rgba(2, 1, 30,0.5)',
+            <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mt-3">
+              <div className="card text-center mb-3" style={{
+                backgroundColor: 'rgba(4, 3, 36,0.6)',
                 color:'#4E4AA1',
                 width: '100%',
-                padding: '1.5rem',
+                padding: '0.5rem',
+                position: 'relative',
               }}>
+                <div className="card-overlay">
+                  <p>Creative Graphic Design</p>
+                </div>
                 <div className="card-body">
                   <h5 style={{ textAlign: 'left' }}>
-                    In addition to coding, I enjoy chess and graphic design, which helps me think creatively and strategically.
-                  </h5>
+                  In my free time, I enjoy graphic design. This hobby allows me to blend creativity with technology, and I love creating visually appealing and user-friendly interfaces.                  </h5>
                 </div>
               </div>
 
-              <div className="card text-center  border-info bg-opacity-10 " style={{
-                backgroundColor: 'rgba(4, 3, 36,0.5)',
+              <div className="card text-center mb-3" style={{
+                backgroundColor: 'rgba(5, 4, 42,0.6)',
                 color:'#4E4AA1',
                 width: '100%',
-                padding: '1.5rem',
+                padding: '0.5rem',
+                position: 'relative',
               }}>
+                <div className="card-overlay">
+                  <p>Team Collaboration</p>
+                </div>
                 <div className="card-body">
                   <h5 style={{ textAlign: 'left' }}>
-                    I am continuously learning and exploring new technologies, always aiming to enhance my skills and bring innovative solutions.
-                  </h5>
+                  Collaboration is key to success in any project. I enjoy working with teams and believe that diverse perspectives lead to better solutions. I value open communication and shared ideas                  </h5>
                 </div>
               </div>
             </div>
 
-            {/* Column 3 - Card 4 and Card 5 (Duplicated for demonstration) */}
-            <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mt-5">
-              <div className="card text-center  border-info bg-opacity-10  mb-3" style={{
-                backgroundColor: 'rgba(5, 4, 42,0.5)',
-                color:'#4E4AA1',
-                width: '100%',
-                padding: '1.5rem',
-              }}>
-                <div className="card-body">
-                  <h5 style={{ textAlign: 'left' }}>
-                    In addition to coding, I enjoy chess and graphic design, which helps me think creatively and strategically.
-                  </h5>
-                </div>
-              </div>
-
-              <div className="card text-center   " style={{
+            {/* Column 3 - Card 4 and Card 5 */}
+            <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mt-4">
+              <div className="card text-center mb-3" style={{
                 backgroundColor: 'rgba(12, 11, 56,0.6)',
                 color:'#4E4AA1',
                 width: '100%',
-                padding: '1.5rem',
+                padding: '0.5rem',
+                position: 'relative',
               }}>
+                <div className="card-overlay">
+                  <p>Commitment to Continuous Growth</p>
+                </div>
                 <div className="card-body">
                   <h5 style={{ textAlign: 'left' }}>
-                    I am continuously learning and exploring new technologies, always aiming to enhance my skills and bring innovative solutions.
-                  </h5>
+                  I believe in continuous growth. I actively seek out new learning opportunities and stay updated with the latest industry trends to improve my technical skills and knowledge.                  </h5>
+                </div>
+              </div>
+
+              <div className="card text-center" style={{
+                backgroundColor: 'rgba(19, 17, 70,0.6)',
+                color:'#4E4AA1',
+                width: '100%',
+                padding: '0.5rem',
+                position: 'relative',
+              }}>
+                <div className="card-overlay">
+                  <p>Passionate About Development</p>
+                </div>
+                <div className="card-body">
+                  <h5 style={{ textAlign: 'left' }}>
+                  I am passionate about software development and enjoy tackling challenging problems. I thrive in environments where I can apply my skills to create efficient and innovative solutions                  </h5>
                 </div>
               </div>
             </div>

@@ -7,3 +7,29 @@
     background-position: -800px 20%; /* Move background horizontally */
   }
 }
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #2F2B7D, #040324);
+
+  color: #02011E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
