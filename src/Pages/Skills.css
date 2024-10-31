@@ -1,4 +1,3 @@
- 
 .leaves_animation{
     height: 100%;
     width: 100%;
@@ -22,45 +21,86 @@
   }
   
   .leaf div:nth-child(1) {
-    left: 20%;
+    left: 5%;
     animation: fall 15s linear infinite;
-    animation-delay: -2s;
+    animation-delay: -1s;
   }
   
   .leaf div:nth-child(2) {
-    left: 70%;
+    left: 10%;
     animation: fall 15s linear infinite;
-    animation-delay: -4s;
+    animation-delay: -14s;
   }
   
   .leaf div:nth-child(3) {
-    left: 10%;
+    left: 15%;
     animation: fall 20s linear infinite;
-    animation-delay: -7s;
+    animation-delay: -2s;
   }
   
   .leaf div:nth-child(4) {
-    left: 50%;
+    left: 20%;
     animation: fall 18s linear infinite;
-    animation-delay: -5s;
+    animation-delay: -13s;
   }
   
   .leaf div:nth-child(5) {
-    left: 85%;
+    left: 25%;
     animation: fall 14s linear infinite;
-    animation-delay: -5s;
+    animation-delay: -3s;
   }
   
   .leaf div:nth-child(6) {
-    left: 15%;
+    left: 30%;
     animation: fall 16s linear infinite;
-    animation-delay: -10s;
+    animation-delay: -12s;
   }
   
   .leaf div:nth-child(7) {
-    left: 90%;
+    left: 35%;
     animation: fall 15s linear infinite;
     animation-delay: -4s;
+  }
+  .leaf div:nth-child(8) {
+    left: 40%;
+    animation: fall 15s linear infinite;
+    animation-delay: -11s;
+  }
+  
+  .leaf div:nth-child(9) {
+    left: 50%;
+    animation: fall 15s linear infinite;
+    animation-delay: -5s;
+  }
+  
+  .leaf div:nth-child(10) {
+    left: 60%;
+    animation: fall 20s linear infinite;
+    animation-delay: -10s;
+  }
+  
+  .leaf div:nth-child(11) {
+    left: 70%;
+    animation: fall 18s linear infinite;
+    animation-delay: -6s;
+  }
+  
+  .leaf div:nth-child(12) {
+    left: 80%;
+    animation: fall 14s linear infinite;
+    animation-delay: -9s;
+  }
+  
+  .leaf div:nth-child(13) {
+    left: 85%;
+    animation: fall 16s linear infinite;
+    animation-delay: -7s;
+  }
+  
+  .leaf div:nth-child(14) {
+    left: 90%;
+    animation: fall 15s linear infinite;
+    animation-delay: -8s;
   }
   
   @keyframes fall {
@@ -70,7 +110,7 @@
       transform: translateX(20px) rotate(0deg);
     }
     20% {
-      opacity: 0.8;
+      opacity: 0.9;
       transform: translateX(-20px) rotate(45deg);
     }
     40% {
@@ -87,28 +127,103 @@
       transform: translateX(-20px) rotate(225deg);
     }
   }
-  
-  .leaf1 {
-    transform: rotateX(180deg);
+
+
+  .leaf1 div:nth-child(1) {
+    left: 5%;
+    animation: rise 15s linear infinite;
+    animation-delay: -1s;
   }
   
-  h2 {
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    font-family: 'Courgette', cursive;
-    font-size: 4em;
-    text-align: center;
-    color: #fff;
-    transform: translateY(-50%);
+  .leaf1 div:nth-child(2) {
+    left: 10%;
+    animation: rise 15s linear infinite;
+    animation-delay: -14s;
   }
   
-  @keyframes parallaxAnimation {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: 100% 0;
-    }
+  .leaf1 div:nth-child(3) {
+    left: 15%;
+    animation: rise 20s linear infinite;
+    animation-delay: -2s;
   }
+  
+  .leaf1 div:nth-child(4) {
+    left: 20%;
+    animation: rise 18s linear infinite;
+    animation-delay: -13s;
+  }
+  
+  .leaf1 div:nth-child(5) {
+    left: 35%;
+    animation: rise 14s linear infinite;
+    animation-delay: -3s;
+  }
+  
+  .leaf1 div:nth-child(6) {
+    left: 40%;
+    animation: rise 16s linear infinite;
+    animation-delay: -12s;
+  }
+  
+  .leaf1 div:nth-child(7) {
+    left: 55%;
+    animation: rise 15s linear infinite;
+    animation-delay: -4s;
+  }
+  .leaf1 div:nth-child(8) {
+    left: 60%;
+    animation: rise 15s linear infinite;
+    animation-delay: -11s;
+  }
+  
+  .leaf1 div:nth-child(9) {
+    left: 75%;
+    animation: rise 15s linear infinite;
+    animation-delay: -5s;
+  }
+  
+  .leaf1 div:nth-child(10) {
+    left: 80%;
+    animation: rise 20s linear infinite;
+    animation-delay: -10s;
+  }
+  
+  .leaf1 div:nth-child(11) {
+    left: 90%;
+    animation: rise 18s linear infinite;
+    animation-delay: -6s;
+  }
+  
+  .leaf1 div:nth-child(12) {
+    left: 95%;
+    animation: rise 14s linear infinite;
+    animation-delay: -9s;
+  }
+  
+  
+  /* Keyframes for rising leaves */
+@keyframes rise {
+  0% {
+      opacity: 1;
+      top: 110%;
+      transform: translateX(-20px) rotate(0deg);
+  }
+  20% {
+      opacity: 0.9;
+      transform: translateX(20px) rotate(-45deg);
+  }
+  40% {
+      transform: translateX(20px) rotate(-90deg);
+  }
+  60% {
+      transform: translateX(20px) rotate(-135deg);
+  }
+  80% {
+      transform: translateX(20px) rotate(-180deg);
+  }
+  100% {
+      top: -10%;
+      transform: translateX(20px) rotate(-225deg);
+  }
+}
   

@@ -1,6 +1,8 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaJs, FaGitAlt } from "react-icons/fa";  // Importing icons
-import { SiBootstrap, SiVite, SiHtml5, SiCss3 } from "react-icons/si";
+import {  FaReact, FaNodeJs, FaJs, FaGitAlt, FaJava, FaPython, FaPhp, FaDocker, FaGithub} from "react-icons/fa";
+import {  SiCsharp, SiKotlin, SiSpring, SiDotnet, SiOracle, SiMysql, SiMongodb,
+  SiHtml5, SiCss3, SiTailwindcss, SiAdobephotoshop, SiAdobeillustrator,
+  SiCoreldraw, SiAdobexd, SiFigma,SiBootstrap, SiVite} from "react-icons/si";
 
 import './Skills.css';  // Custom styles
 
@@ -12,7 +14,7 @@ const Skills = () => {
         right: 0,
         bottom: 0,
         backgroundImage: `
-          url('./src/images/—Pngtree—blue network data globe_4869747.png')
+          url('./src/images/—Pngtree—creative blue purple technology lines_5455942.png')
         `,
         backgroundRepeat: 'repeat-x',
         backgroundPosition: `
@@ -23,40 +25,115 @@ const Skills = () => {
           0 0
         `,
         backgroundSize: `
-          700px,
+          1400px,
           800px,
           500px 200px,
           1000px,
           400px 260px
         `,
-        opacity: 0.5,  // Reduce opacity of the background image
-        animation: 'parallaxAnimation 10s infinite linear',
+        opacity: 0.1,  // Reduce opacity of the background image
+        // animation: 'parallaxAnimation 10s infinite linear',
         zIndex: 1  // Keep background behind the content
       };
+
+      const containerStyle = {
+        position: 'relative',
+        zIndex: 10, // Higher z-index to ensure it's in front
+         marginTop: '1%'
+    };
+
+    const cardStyle = {
+        background: 'rgba(12, 11, 56, 0.7)', // Semi-transparent background
+        color: 'white',
+        boxShadow: '0 4px 8px rgba(60, 56, 152, 0.9)', // Add shadow to lift the cards
+        borderRadius: '10px',
+        margin:'0',
+        padding:'1%'
+        
+    };
+
+
+
     return (
         <div className="leaves_animation" >
             {/* First set of leaves */}
             <div style={parallaxBackgroundStyle}></div>
             <div className="leaf">
-            <div><FaReact size={75} color="#61DBFB" /></div>
-                <div><FaNodeJs size={75} color="#339933" /></div>
-                <div><FaJs size={75} color="#F7DF1E" /></div>
-                <div><SiBootstrap size={75} color="#7952B3" /></div>
-                <div><SiVite size={75} color="#646CFF" /></div>
-                <div><FaGitAlt size={75} color="#F1502F" /></div>
-                <div><SiHtml5 size={75} color="#E34F26" /></div>
+                <div><FaReact size={75} color="#4E4AA1" /></div>
+                <div><FaNodeJs size={75} color="#3C3898" /></div>
+                <div><FaJs size={75} color="#2F2B7D" /></div>
+                <div><SiBootstrap size={75} color="#211E61" /></div>
+                <div><SiVite size={75} color="#4E4AA1" /></div>
+                <div><FaGitAlt size={75} color="#3C3898" /></div>
+                <div><SiHtml5 size={75} color="#2F2B7D" /></div>
+                <div><FaGithub size={75} color="#211E61" /></div>
+                <div><FaDocker size={75} color="#4E4AA1" /></div>
+                <div><FaPhp size={75} color="#3C3898" /></div>
+                <div><FaPython size={75} color="#2F2B7D" /></div>
+                <div>< FaJava size={75} color="#211E61" /></div>
+                <div><SiCsharp size={75} color="#4E4AA1" /></div>
+                <div><SiKotlin size={75} color="#3C3898" /></div>
             </div>
 
             {/* Rotated set of leaves */}
             <div className="leaf leaf1">
-                <div><img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px" alt="Autumn Leaf 1" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px" alt="Autumn Leaf 2" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" alt="Autumn Leaf 3" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px" alt="Green Leaf" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px" alt="Falling Leaf" /></div>
-                <div><img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px" alt="Realistic Leaf" /></div>
-                <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px" alt="Autumn Leaf" /></div>
+            <div><SiSpring size={75} color="#2F2B7D" /></div>
+                <div><SiDotnet size={75} color="#211E61" /></div>
+                <div><SiOracle size={75} color="#4E4AA1" /></div>
+                <div><SiMysql size={75} color="#3C3898" /></div>
+                <div><SiMongodb size={75} color="#2F2B7D" /></div>
+                <div><SiCss3 size={75} color="#211E61" /></div>
+                <div><SiTailwindcss size={75} color="#4E4AA1" /></div>
+                <div><SiAdobephotoshop size={75} color="#3C3898" /></div>
+                <div><SiAdobeillustrator size={75} color="#2F2B7D" /></div>
+                <div><SiCoreldraw size={75} color="#211E61" /></div>
+                <div><SiAdobexd size={75} color="#4E4AA1" /></div>
+                <div>< SiFigma size={75} color="#3C3898" /></div>
+                
             </div>
+            <div className="container " style={containerStyle}>
+              <h1 className="text-white">My Skills</h1>
+              <div className="row mt-3">
+                    <div className="col-md-6">
+                    <div className="card mt-3 " style={cardStyle}>
+                    <h5 style={{textAlign:'start'}}>Programming Languages</h5>
+                    <p style={{textAlign:'start'}}>Core Languages: JavaScript, Python, Java, PHP, C#, Kotlin <br></br> Markup & Styling: HTML, CSS</p>
+                    </div>              
+                    </div>
+
+                    <div className="col-md-6">
+                    <div className="card mt-3 " style={cardStyle}>
+                    <h5 style={{textAlign:'start'}}>Frontend Frameworks & Libraries</h5>
+                    <p style={{textAlign:'start'}}> JavaScript Frameworks: React, Vite <br></br>Styling Libraries: Bootstrap, TailwindCSS  </p>
+                    </div>
+                    </div>
+              </div>
+
+              <div className="row mt-3">
+                  <div className="col-md-6">
+                  <div className="card mt-3 " style={cardStyle}>
+                  <h5 style={{textAlign:'start'}}>Backend Frameworks & Libraries</h5>
+                  <p style={{textAlign:'start'}}>Core Backend: Node.js, .NET, Spring (Java)  <br></br>Data Handling: MySQL, MongoDB, Oracle</p>
+                  </div>
+                  </div>
+
+                  <div className="col-md-6">
+                  <div className="card mt-3 " style={cardStyle}>
+                  <h5 style={{textAlign:'start'}}>Design & Prototyping Tools</h5>
+                  <p style={{textAlign:'start'}}>Design: Adobe Photoshop, Adobe Illustrator, CorelDraw  <br></br>UI/UX Prototyping: Adobe XD, Figma</p>
+                  </div>
+                  </div>
+              </div>
+
+              <div className="row mt-3">
+                  <div className="col-md-6 offset-md-3">
+                  <div className="card mt-3 " style={cardStyle}>
+                  <h5 style={{textAlign:'start'}}>DevOps & Tools</h5>
+                  <p style={{textAlign:'start'}}>Version Control: Git, GitHub<br></br>Containerization: Docker <br></br>Build Tools: Vite</p>
+                  </div>                  
+                  </div>
+                  </div>
+              </div>
 
             
         </div>

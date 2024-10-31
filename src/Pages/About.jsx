@@ -63,7 +63,7 @@ const About = () => {
                  position: 'relative',
               }}>
                 <div className="card-overlay">
-                  <p>Explore My Education</p>
+                  <p><b>Explore My Education</b></p>
                 </div>
                 <div className="card-body">
                   <h5 style={{ textAlign: 'left' }}>
@@ -83,7 +83,7 @@ const About = () => {
                 position: 'relative',
               }}>
                 <div className="card-overlay">
-                  <p>Creative Graphic Design</p>
+                  <p><b>Creative Graphic Design</b></p>
                 </div>
                 <div className="card-body">
                   <h5 style={{ textAlign: 'left' }}>
@@ -99,7 +99,7 @@ const About = () => {
                 position: 'relative',
               }}>
                 <div className="card-overlay">
-                  <p>Team Collaboration</p>
+                  <p><b>Team Collaboration</b></p>
                 </div>
                 <div className="card-body">
                   <h5 style={{ textAlign: 'left' }}>
@@ -118,7 +118,7 @@ const About = () => {
                 position: 'relative',
               }}>
                 <div className="card-overlay">
-                  <p>Commitment to Continuous Growth</p>
+                  <p><b>Commitment to Continuous Growth</b></p>
                 </div>
                 <div className="card-body">
                   <h5 style={{ textAlign: 'left' }}>
@@ -134,7 +134,7 @@ const About = () => {
                 position: 'relative',
               }}>
                 <div className="card-overlay">
-                  <p>Passionate About Development</p>
+                  <p><b>Passionate About Development</b></p>
                 </div>
                 <div className="card-body">
                   <h5 style={{ textAlign: 'left' }}>
