@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import './Projects.css'; // Import custom CSS for animations
+import React, { useState } from 'react';
+import './Projects.css';
 
 const Projects = () => {
   const cardData = [
-    { imgSrc: 'your-carousel-image-1', title: 'Card 1 Title', text: 'This is the first card of the carousel.' },
-    { imgSrc: 'your-carousel-image-2', title: 'Card 2 Title', text: 'This is the second card of the carousel.' },
-    { imgSrc: 'your-carousel-image-3', title: 'Card 3 Title', text: 'This is the third card of the carousel.' },
-    { imgSrc: 'your-carousel-image-4', title: 'Card 4 Title', text: 'This is the fourth card of the carousel.' },
+    { imgSrc: './src/images/Naviguide.png', title: 'Card 1 Title', text: 'This is the first card of the carousel.' },
+    { imgSrc: './src/images/hotelMS.png', title: 'Card 2 Title', text: 'This is the second card of the carousel.' },
+    { imgSrc: './src/images/maths.png', title: 'Card 3 Title', text: 'This is the third card of the carousel.' },
+    { imgSrc: './src/images/foodMS.png', title: 'Card 4 Title', text: 'This is the fourth card of the carousel.' },
     { imgSrc: 'your-carousel-image-5', title: 'Card 5 Title', text: 'This is the fifth card of the carousel.' },
     { imgSrc: 'your-carousel-image-6', title: 'Card 6 Title', text: 'This is the sixth card of the carousel.' },
     { imgSrc: 'your-carousel-image-7', title: 'Card 7 Title', text: 'This is the seventh card of the carousel.' },
     { imgSrc: 'your-carousel-image-8', title: 'Card 8 Title', text: 'This is the eighth card of the carousel.' },
-    { imgSrc: 'your-carousel-image-9', title: 'Card 9 Title', text: 'This is the ninth card of the carousel.' },
-    { imgSrc: 'your-carousel-image-10', title: 'Card 10 Title', text: 'This is the tenth card of the carousel.' },
-    { imgSrc: 'your-carousel-image-11', title: 'Card 11 Title', text: 'This is the eleventh card of the carousel.' },
-    { imgSrc: 'your-carousel-image-12', title: 'Card 12 Title', text: 'This is the twelfth card of the carousel.' },
+    // { imgSrc: 'your-carousel-image-9', title: 'Card 9 Title', text: 'This is the ninth card of the carousel.' },
+    // { imgSrc: 'your-carousel-image-10', title: 'Card 10 Title', text: 'This is the tenth card of the carousel.' },
+    // { imgSrc: 'your-carousel-image-11', title: 'Card 11 Title', text: 'This is the eleventh card of the carousel.' },
+    // { imgSrc: 'your-carousel-image-12', title: 'Card 12 Title', text: 'This is the twelfth card of the carousel.' },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -27,30 +27,35 @@ const Projects = () => {
 
   const totalPages = Math.ceil(cardData.length / cardsPerPage);
 
-  const changePage = (newPage, direction) => {
-    if (newPage === currentPage) return;
-    setAnimationDirection(direction);
+  const changePage = (newPage) => {
+    if (newPage > currentPage) {
+      setAnimationDirection('slide-left'); // Forward animation
+    } else {
+      setAnimationDirection('slide-right'); // Backward animation
+    }
+
     setCurrentPage(newPage);
+
+    // Clear the animation class after the animation duration (0.5s)
+    setTimeout(() => {
+      setAnimationDirection('');
+    }, 500);
   };
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
-      changePage(currentPage + 1, 'slide-left');
+      changePage(currentPage + 1);
     }
   };
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
-      changePage(currentPage - 1, 'slide-right');
+      changePage(currentPage - 1);
     }
   };
 
   const handlePageClick = (pageNumber) => {
-    if (pageNumber > currentPage) {
-      changePage(pageNumber, 'slide-left');
-    } else if (pageNumber < currentPage) {
-      changePage(pageNumber, 'slide-right');
-    }
+    changePage(pageNumber);
   };
 
   return (
@@ -64,7 +69,7 @@ const Projects = () => {
                 {/* Front of the card */}
                 <div className="flip-card-front">
                   <div
-                    className="card h-100 border-success animated-border" // Add animated-border class
+                    className="card h-100 border-success animated-border"
                     style={{
                       backgroundColor: 'black',
                       borderRadius: '0.5rem',
@@ -81,7 +86,7 @@ const Projects = () => {
                 {/* Back of the card */}
                 <div className="flip-card-back">
                   <div
-                    className="card h-100 border-success animated-border" // Add animated-border class
+                    className="card h-100 border-success animated-border"
                     style={{
                       backgroundColor: 'rgba(40, 167, 69, 0.3)',
                       borderRadius: '0.5rem',
