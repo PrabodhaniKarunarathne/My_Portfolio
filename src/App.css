@@ -131,7 +131,7 @@ html {
 }
 
 #projects {
-
+/* padding-top: 3%; */
  background-color: #02011E;
 }
 
@@ -161,3 +161,24 @@ html, body, #root {
   text-align: center;
   background: #02011E;
 }
+
+/* Projects.css */
+
+
+.btn-custom {
+  color: #4E4AA1; /* Font color on hover */
+  background-color: #02011E; /* Background color on hover */
+  border-color: #2F2B7D; /* Border color on hover */
+  font-weight: bold;
+  border-width: 2px;
+}
+.btn-custom:hover {
+  color: #02011E; /* Font color on hover */
+  background-color: #211E61; /* Background color on hover */
+  border-color: #02011E; /* Border color on hover */
+  font-weight: bold;
+  border-width: 2px;
+  
+  
+}
+

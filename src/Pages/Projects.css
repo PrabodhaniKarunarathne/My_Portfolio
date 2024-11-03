@@ -63,13 +63,14 @@ margin-bottom: 20%;
 }
 
 .flip-card-front {
-  background-color: rgba(40, 167, 69, 0.1);
-  color: black;
+  background-color: rgba(5, 4, 42, 0.1);
+  color: #3C3898;
+  
 }
 
 .flip-card-back {
-  background-color: rgba(40, 167, 69, 0.3);
-  color: white;
+  background-color: rgba(5, 4, 42, 0.3);
+  color: #02011E;
   transform: rotateY(180deg); /* Back side is rotated */
 }
 
@@ -102,10 +103,10 @@ margin-bottom: 20%;
   right: 0;
   bottom: 0;
   border-radius: 0.1rem; /* Match the card's border radius */
-  background: linear-gradient(120deg, #00F260, #0575E6);
+  background: linear-gradient(120deg, #02011E, #3C3898);
   z-index: -1; /* Place behind the card */
   filter: blur(10px); /* Create a blurred effect */
-  animation: gradient-animation 3s ease infinite; /* Apply animation */
+  animation: gradient-animation 1s ease infinite; /* Apply animation */
 }
 
 /* Animation for the gradient */
@@ -120,3 +121,33 @@ margin-bottom: 20%;
     background-position: 0% 50%;
   }
 }
+
+
+@keyframes PBackgroundAnimation {
+  from {
+    background-position: 0 20%;
+  }
+  to {
+    background-position: -800px 20%; /* Move background horizontally */
+  }
+}
+
+/* Projects.css */
+
+.tech-icon {
+  font-size: 2.5rem; /* Default size for larger screens */
+  transition: font-size 0.3s ease; /* Smooth transition for size change */
+}
+
+@media (max-width: 768px) {
+  .tech-icon {
+    font-size: 2rem; /* Smaller size for mobile screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .tech-icon {
+    font-size: 1.5rem; /* Even smaller size for extra small screens */
+  }
+}
+

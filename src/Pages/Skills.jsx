@@ -14,7 +14,7 @@ const Skills = () => {
         right: 0,
         bottom: 0,
         backgroundImage: `
-          url('./src/images/—Pngtree—creative blue purple technology lines_5455942.png')
+          url('./src/images/—Pngtree—technology network digital diagram geometric_9000623.png')
         `,
         backgroundRepeat: 'repeat-x',
         backgroundPosition: `
