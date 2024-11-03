@@ -7,7 +7,8 @@ import About from './Pages/About';
 import Skills from './Pages/Skills';
 import Contact from './Pages/Contact';
 import Projects from './Pages/Projects';
-import Resume from './Pages/Resume';
+// import Resume from './Pages/Resume';
+import MyServices from './Pages/MyServices';
 
 
 
@@ -55,10 +56,16 @@ const App = () => {
               <Projects/> 
             </section>
 
-            {/* Resume Section */}
+            {/* Resume Section
             <section id="resume" className="section">
               <Resume/>
+            </section> */}
+
+            {/* Services Section */}
+            <section id="myServices" className="section">
+              <MyServices/>
             </section>
+
 
             {/* Contact Section */}
             <section id="contact" className="section">

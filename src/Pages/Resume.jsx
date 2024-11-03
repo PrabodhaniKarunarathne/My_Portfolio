@@ -136,22 +136,7 @@ const Resume = () => {
             </div>
           </div>
 
-          {/* Third Card */}
-          {/* <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
-          <div className="card text-center resume-card animated-border-card ">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          <div className="card-body">
-            <h5 className="card-title">Special title treatment</h5>
-            <p className="card-text">
-             With supporting text below as a natural lead-in to additional content.
-            </p>
-          </div>
-          </div>
-          </div> */}
-
+         
           {/* Fourth Card */}
           <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5">
             <div className="card animated-border-card  text-center resume-card   bg-opacity-10 text-white" style={{height:'70%'}}>

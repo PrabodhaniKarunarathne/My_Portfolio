@@ -1,0 +1,169 @@
+/* MyServices.css */
+
+.services-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    z-index: 2;
+  }
+  
+  #background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #02011E;
+    z-index: 1;
+  }
+  
+  /* Title Styling */
+  .services-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(56, 11, 11);
+    margin-bottom: 30px;
+    z-index: 2;
+  }
+  
+  /* Service Card Styles */
+  .animated-border-card {
+    position: relative;
+    background-color: rgba(33, 30, 97, 0.2);
+    border-radius: 0.5rem;
+    color: white;
+    padding: 20px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  .animated-border-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Service Icon Container */
+  .service-icon-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px; /* Center and add space */
+  }
+  
+  .service-icon {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1) brightness(1.5); /* Custom color effect */
+    transition: filter 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .animated-border-card:hover .service-icon {
+    filter: grayscale(0) brightness(1); /* Restore color on hover */
+  }
+  
+  /* Animated Border */
+  .animated-border-card span {
+    position: absolute;
+    background: #50dfdb;
+    animation: animate-border 4s linear infinite;
+    z-index: 2;
+  }
+  
+  .animated-border-card span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform-origin: left;
+  }
+  
+  .animated-border-card span:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    transform-origin: top;
+  }
+  
+  .animated-border-card span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform-origin: right;
+  }
+  
+  .animated-border-card span:nth-child(4) {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transform-origin: bottom;
+  }
+  
+  @keyframes animate-border {
+    0%, 100% { transform: scale(0); }
+    50% { transform: scale(1); }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .animated-border-card {
+      min-height: 200px;
+    }
+  }
+  
+  /* MyServices.css */
+
+#background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.services-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Enable scrolling on small screens */
+@media (max-width: 768px) {
+  .services-container {
+    max-height: 100vh; /* Restrict height */
+    overflow-y: auto;  /* Enable vertical scroll */
+    scroll-behavior: smooth;
+  }
+}
+
+/* Card styles */
+.card.animated-border-card {
+  /* background: white; */
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+
+.card.animated-border-card:hover {
+  transform: scale(1.05);
+}
+
+.card .card-body {
+  position: relative;
+  z-index: 3;
+}
+
+.card .service-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}

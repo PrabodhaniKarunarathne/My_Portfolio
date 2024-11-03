@@ -57,26 +57,29 @@ const ContactForm = () => {
       <div className="container mt-5 d-flex flex-column flex-md-row">
         {/* Contact Form */}
         <div className="col-12 col-md-8 mb-4 mb-md-0">
-          <div className="p-4 border border-success rounded " style={{
-            background: "linear-gradient(90deg, #0B525B, #272640)"}}>
+          <div className="p-4 border rounded " 
+          style={{
+            borderColor:'#2F2B7D',
+            background: "linear-gradient(90deg, #3C3898, #05042A)"}}>
             <h3 className="text-white">Contact Me</h3>
             <Form onSubmit={handleSubmit(onSubmit)} className="contact-form">
               {/* Name Field */}
               <Form.Group controlId="formName" className="mb-2">
-                <Form.Label className="text-white">Name</Form.Label>
+                <Form.Label className="" style={{color:'#131146',fontWeight:'bold'}}>Name</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Enter your name"
                   {...register('name', { required: 'Name is required' })}
                   isInvalid={errors.name}
-                  className="p-2 bg-success bg-opacity-10 border border-success rounded text-white"
+                  className="p-2  rounded text-white"
+                  style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
                 />
                 {errors.name && <Alert variant="danger">{errors.name.message}</Alert>}
               </Form.Group>
 
               {/* Email Field */}
               <Form.Group controlId="formEmail" className="mb-2">
-                <Form.Label className="text-white">Email</Form.Label>
+                <Form.Label className="" style={{color:'#131146',fontWeight:'bold'}}>Email</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter your email"
@@ -85,14 +88,16 @@ const ContactForm = () => {
                     pattern: { value: /^\S+@\S+$/i, message: 'Invalid email address' },
                   })}
                   isInvalid={errors.email}
-                  className="p-2 bg-success bg-opacity-10 border border-success rounded text-white"
+                  className="p-2  rounded text-white"
+                  style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
+
                 />
                 {errors.email && <Alert variant="danger">{errors.email.message}</Alert>}
               </Form.Group>
 
               {/* Phone Number Field */}
               <Form.Group controlId="formPhone" className="mb-2">
-                <Form.Label className="text-white">Phone Number</Form.Label>
+                <Form.Label className="" style={{color:'#131146',fontWeight:'bold'}}>Phone Number</Form.Label>
                 <Form.Control
                   type="tel"
                   placeholder="Enter your phone number"
@@ -104,32 +109,36 @@ const ContactForm = () => {
                     },
                   })}
                   isInvalid={errors.phone}
-                  className="p-2 bg-success bg-opacity-10 border border-success rounded text-white"
+                  className="p-2  rounded text-white"
+                  style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
+
                 />
                 {errors.phone && <Alert variant="danger">{errors.phone.message}</Alert>}
               </Form.Group>
 
               {/* Message Field */}
               <Form.Group controlId="formMessage" className="mb-2">
-                <Form.Label className="text-white">Message</Form.Label>
+                <Form.Label className="" style={{color:'#131146',fontWeight:'bold'}}>Message</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={5}
                   placeholder="Enter your message"
                   {...register('message', { required: 'Message is required' })}
                   isInvalid={errors.message}
-                  className="p-2 bg-success bg-opacity-10 border border-success rounded text-white"
+                  className="p-2  rounded text-white"
+                  style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
+
                 />
                 {errors.message && <Alert variant="danger">{errors.message.message}</Alert>}
               </Form.Group>
 
               <Button
-                className="border border-success rounded"
-                variant="success"
+                className="btn-custom rounded"
+                // variant="success"
                 type="submit"
-                style={{ backgroundColor: '#558767', color: 'white' }} // Apply custom background color
-                onMouseOver={(e) => e.target.style.backgroundColor = '#31543F'} // Hover color change
-                onMouseOut={(e) => e.target.style.backgroundColor = '#558767'}  // Reset on hover out
+                // style={{ backgroundColor: '#558767', color: 'white' }} // Apply custom background color
+                // onMouseOver={(e) => e.target.style.backgroundColor = '#31543F'} // Hover color change
+                // onMouseOut={(e) => e.target.style.backgroundColor = '#558767'}  // Reset on hover out
               >
                 Submit
               </Button>
@@ -164,8 +173,8 @@ const ContactForm = () => {
             </g>
             <defs>
               <linearGradient id="grad" x1="154" x2="160" y1="49" y2="132" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stopColor="#558767" />
-                <stop offset="1" stopColor="#84A98C" />
+                <stop offset="0" stopColor="#4E4AA1" />
+                <stop offset="1" stopColor="#211E61" />
               </linearGradient>
             </defs>
           </svg>
@@ -174,7 +183,7 @@ const ContactForm = () => {
 
       {/* Footer Section */}
       <div className="justify-content-center mt-5  w-100" style={{
-        background: "linear-gradient(90deg, #4D194D, #006466)"}}>
+        background: "linear-gradient(90deg, #4E4AA1, #211E61)"}}>
         <footer className="footer mt-5  text-center w-100 py-4">
           <p className="text-white mb-2">Copyright © 2024 K.T.T.P. Dilhari Karunarathne</p>
           <p className="text-white mb-4">Phone: +94 776884107</p>

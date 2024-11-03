@@ -135,8 +135,13 @@ html {
  background-color: #02011E;
 }
 
-
+/* 
 #resume {
+   
+  background-color: #02011E;
+} */
+
+#myServices {
    
   background-color: #02011E;
 }
@@ -181,4 +186,6 @@ html, body, #root {
   
   
 }
+
+
 

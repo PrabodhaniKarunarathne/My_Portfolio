@@ -46,7 +46,7 @@ const Projects = () => {
     right: 0,
     bottom: 0,
     overflow: 'hidden',
-    backgroundImage: `url('./src/images/—Pngtree—technology light effect glow big_8210074.png')`,
+    backgroundImage: `url('./src/images/—Pngtree—network data globe blue _4945702.png')`,
     backgroundRepeat: 'repeat-x',
     backgroundPosition: '0 20%, 0 100%, 0 50%, 0 100%, 0 0',
     backgroundSize: '700px, 800px, 500px 200px, 1000px, 400px 260px',
@@ -148,7 +148,7 @@ const Projects = () => {
                   {/* Front of the card */}
                   <div className="flip-card-front">
                     <div className="card h-100  animated-border" 
-                    style={{ backgroundColor: 'rgba(4, 3, 36,0.2)', 
+                    style={{ backgroundColor: 'rgba(2, 1, 30,0.5)', 
                       borderRadius: '0.5rem',
                       color:'#02011E',
                       fontWeight:'bold',  
