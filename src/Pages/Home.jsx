@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImage from '../images/IMG-20240806-WA0059.jpg'; // Adjust the path based on your project structure
+import profileImage from '../images/my.jpg'; // Adjust the path based on your project structure
 import backgroundImg from '../images/—Pngtree—technology network digital diagram geometric_9000623.png';
 import './Home.css'; 
 
@@ -22,8 +22,8 @@ const Home = () => {
               <h6>
             <span className="mt-5" style={{ color: '#4E4AA1' }}>{"<"}SOFTWARE DEVELOPER{" />"}</span> <br></br>
               <span className="mt-5" style={{ color: '#3C3898' }}>{"<"}WEB DEVELOPER{" />"}</span> <br></br>
-              <span className="mt-5" style={{ color: '#2F2B7D' }}>{"<"}UI/UX DESIGNER{" />"}</span><br></br>
-              <span className="mt-5" style={{ color: '#211E61' }}>{"<"}GRAPHIC DESIGNER{" />"}</span> 
+              <span className="mt-5" style={{ color: '#4E4AA1' }}>{"<"}UI/UX DESIGNER{" />"}</span><br></br>
+              <span className="mt-5" style={{ color: '#3C3898' }}>{"<"}GRAPHIC DESIGNER{" />"}</span> 
               </h6>
             </p>    
                            
@@ -36,9 +36,9 @@ const Home = () => {
             <h4 className="display-5 text-white mb-4 animate__animated animate__fadeInDown" >
               
               <p >
-                He<span style={{ color: '#4E4AA1' }}>llo</span> <span style={{ color: '#211E61' }}>I’m</span> <span style={{ color: '#4E4AA1' }}>Pra</span>
+                He<span style={{ color: '#4E4AA1' }}>llo</span> <span style={{ color: '#2F2B7D' }}>I’m</span> <span style={{ color: '#4E4AA1' }}>Pra</span>
                 <span style={{ color: '#3C3898' }}>bod</span> 
-                <span style={{ color: '#2F2B7D' }}>hani</span> <span style={{ color: '#211E61' }}>Kar</span>
+                <span style={{ color: '#2F2B7D' }}>hani</span> <span style={{ color: '#4E4AA1' }}>Kar</span>
                 <span style={{ color: '#2F2B7D' }}>una</span>
                 <span style={{ color: '#3C3898' }}>rat</span>
                 <span style={{ color: '#4E4AA1' }}>hne</span>
