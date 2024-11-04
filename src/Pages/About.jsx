@@ -33,7 +33,7 @@ const About = () => {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundImage: `url('./src/images/—Pngtree—network technology intelligence information data_4893164.png')`,
+    backgroundImage: `url('/Images/—Pngtree—network technology intelligence information data_4893164.png')`,
     backgroundRepeat: 'repeat-x',
     backgroundPosition: '0 20%',
     backgroundSize: isSmallScreen ? '800px' : '700px',
