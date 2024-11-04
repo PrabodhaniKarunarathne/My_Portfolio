@@ -60,12 +60,12 @@ const ContactForm = () => {
           <div className="p-4 border rounded " 
           style={{
             borderColor:'#2F2B7D',
-            background: "linear-gradient(90deg, #3C3898, #05042A)"}}>
+            background: "linear-gradient(90deg, #2F2B7D, #02011E)"}}>
             <h3 className="text-white" style={{fontWeight:'bold'}}>Contact <span style={{color:'#4E4AA1'}}>Me</span></h3>
             <Form onSubmit={handleSubmit(onSubmit)} className="contact-form">
               {/* Name Field */}
               <Form.Group controlId="formName" className="mb-2">
-                <Form.Label className="" style={{color:'#05042A',fontWeight:'bold'}}>Name</Form.Label>
+                <Form.Label className="" style={{color:'#4E4AA1',fontWeight:'bold'}}>Name</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Enter your name"
@@ -79,7 +79,7 @@ const ContactForm = () => {
 
               {/* Email Field */}
               <Form.Group controlId="formEmail" className="mb-2">
-                <Form.Label className="" style={{color:'#05042A',fontWeight:'bold'}}>Email</Form.Label>
+                <Form.Label className="" style={{color:'#4E4AA1',fontWeight:'bold'}}>Email</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter your email"
@@ -97,7 +97,7 @@ const ContactForm = () => {
 
               {/* Phone Number Field */}
               <Form.Group controlId="formPhone" className="mb-2">
-                <Form.Label className="" style={{color:'#05042A',fontWeight:'bold'}}>Phone Number</Form.Label>
+                <Form.Label className="" style={{color:'#4E4AA1',fontWeight:'bold'}}>Phone Number</Form.Label>
                 <Form.Control
                   type="tel"
                   placeholder="Enter your phone number"
@@ -118,7 +118,7 @@ const ContactForm = () => {
 
               {/* Message Field */}
               <Form.Group controlId="formMessage" className="mb-2">
-                <Form.Label className="" style={{color:'#05042A',fontWeight:'bold'}}>Message</Form.Label>
+                <Form.Label className="" style={{color:'#4E4AA1',fontWeight:'bold'}}>Message</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={5}
