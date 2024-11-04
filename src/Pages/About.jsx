@@ -49,8 +49,8 @@ const About = () => {
     <div style={containerStyle}>
       <div style={AboutBackgroundStyle}></div>
       <div style={contentWrapperStyle}>
-        <div className="container text-white">
-          <h1 className="mt-5">Who I Am</h1>
+        <div className="container text-white" style={{fontWeight:'bold'}}>
+          <h1 className="mt-5">Who <span style={{color:'#4E4AA1',fontWeight:'bold'}}>I</span> <span style={{color:'#3C3898',fontWeight:'bold'}}>Am</span></h1>
           <div className="row justify-content-center">
             
             {/* Column 1 - Card 1 */}
