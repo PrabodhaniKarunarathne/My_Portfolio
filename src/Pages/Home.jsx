@@ -35,7 +35,7 @@ const Home = () => {
           
             <h4 className="display-5 text-white mb-4 animate__animated animate__fadeInDown" >
               
-              <p >
+              <p  style={{fontWeight:'bold'}}>
                 He<span style={{ color: '#4E4AA1' }}>llo</span> <span style={{ color: '#2F2B7D' }}>I’m</span> <span style={{ color: '#4E4AA1' }}>Pra</span>
                 <span style={{ color: '#3C3898' }}>bod</span> 
                 <span style={{ color: '#2F2B7D' }}>hani</span> <span style={{ color: '#4E4AA1' }}>Kar</span>
