@@ -150,7 +150,7 @@ const MyServices = () => {
 
       <div style={contentWrapperStyle}>
         <div className="container mt-5 text-white">
-          <h1 className="services-title">What I Do</h1>
+          <h1 className="services-title" style={{fontWeight:'bold'}}>What <span style={{color:'#4E4AA1'}}>I</span> <span style={{color:'#3C3898'}}>Do</span></h1>
           <div className="row justify-content-center">
             {servicesData.map((service, index) => (
               <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5" key={index}>
@@ -159,7 +159,7 @@ const MyServices = () => {
                   <span></span>
                   <span></span>
                   <span></span>
-                  <div className="card-body">
+                  <div className="card-body border">
                     <div className="service-icon-container">
                       <div className="service-icon">
                         {service.icon}

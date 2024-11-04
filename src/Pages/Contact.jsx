@@ -61,17 +61,17 @@ const ContactForm = () => {
           style={{
             borderColor:'#2F2B7D',
             background: "linear-gradient(90deg, #3C3898, #05042A)"}}>
-            <h3 className="text-white">Contact Me</h3>
+            <h3 className="text-white" style={{fontWeight:'bold'}}>Contact <span style={{color:'#4E4AA1'}}>Me</span></h3>
             <Form onSubmit={handleSubmit(onSubmit)} className="contact-form">
               {/* Name Field */}
               <Form.Group controlId="formName" className="mb-2">
-                <Form.Label className="" style={{color:'#131146',fontWeight:'bold'}}>Name</Form.Label>
+                <Form.Label className="" style={{color:'#05042A',fontWeight:'bold'}}>Name</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Enter your name"
                   {...register('name', { required: 'Name is required' })}
                   isInvalid={errors.name}
-                  className="p-2  rounded text-white"
+                  className="p-2 border rounded text-white"
                   style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
                 />
                 {errors.name && <Alert variant="danger">{errors.name.message}</Alert>}
@@ -79,7 +79,7 @@ const ContactForm = () => {
 
               {/* Email Field */}
               <Form.Group controlId="formEmail" className="mb-2">
-                <Form.Label className="" style={{color:'#131146',fontWeight:'bold'}}>Email</Form.Label>
+                <Form.Label className="" style={{color:'#05042A',fontWeight:'bold'}}>Email</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter your email"
@@ -88,7 +88,7 @@ const ContactForm = () => {
                     pattern: { value: /^\S+@\S+$/i, message: 'Invalid email address' },
                   })}
                   isInvalid={errors.email}
-                  className="p-2  rounded text-white"
+                  className="p-2 border rounded text-white"
                   style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
 
                 />
@@ -97,7 +97,7 @@ const ContactForm = () => {
 
               {/* Phone Number Field */}
               <Form.Group controlId="formPhone" className="mb-2">
-                <Form.Label className="" style={{color:'#131146',fontWeight:'bold'}}>Phone Number</Form.Label>
+                <Form.Label className="" style={{color:'#05042A',fontWeight:'bold'}}>Phone Number</Form.Label>
                 <Form.Control
                   type="tel"
                   placeholder="Enter your phone number"
@@ -109,7 +109,7 @@ const ContactForm = () => {
                     },
                   })}
                   isInvalid={errors.phone}
-                  className="p-2  rounded text-white"
+                  className="p-2 border rounded text-white"
                   style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
 
                 />
@@ -118,14 +118,14 @@ const ContactForm = () => {
 
               {/* Message Field */}
               <Form.Group controlId="formMessage" className="mb-2">
-                <Form.Label className="" style={{color:'#131146',fontWeight:'bold'}}>Message</Form.Label>
+                <Form.Label className="" style={{color:'#05042A',fontWeight:'bold'}}>Message</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={5}
                   placeholder="Enter your message"
                   {...register('message', { required: 'Message is required' })}
                   isInvalid={errors.message}
-                  className="p-2  rounded text-white"
+                  className="p-2 border rounded text-white"
                   style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
 
                 />
@@ -183,7 +183,7 @@ const ContactForm = () => {
 
       {/* Footer Section */}
       <div className="justify-content-center mt-5  w-100" style={{
-        background: "linear-gradient(90deg, #4E4AA1, #211E61)"}}>
+        background: "linear-gradient(90deg, #1A1854, #4E4AA1)"}}>
         <footer className="footer mt-5  text-center w-100 py-4">
           <p className="text-white mb-2">Copyright © 2024 K.T.T.P. Dilhari Karunarathne</p>
           <p className="text-white mb-4">Phone: +94 776884107</p>

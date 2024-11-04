@@ -138,7 +138,7 @@ const Projects = () => {
     <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
       <div style={PBackgroundStyle}></div>
       <div className="container mt-5" style={{ position: 'relative', zIndex: 2 }}>
-        <h1 className="mt-3 text-white"><p >Highlighted Projects   </p></h1>
+        <h1 className="mt-3 text-white" style={{fontWeight:'bold'}}>Highlighted <span style={{color:'#4E4AA1'}}>Projects</span>   </h1>
         {/* Card Container */}
         <div className={`row row-cols-1 row-cols-md-3 g-4 card-container ${animationDirection}`}>
           {currentCards.map((card, index) => (
@@ -148,18 +148,19 @@ const Projects = () => {
                   {/* Front of the card */}
                   <div className="flip-card-front">
                     <div className="card h-100  animated-border" 
-                    style={{ backgroundColor: 'rgba(2, 1, 30,0.5)', 
+                    style={{ backgroundColor: 'rgba(2, 1, 30,0.1)', 
                       borderRadius: '0.5rem',
                       color:'#02011E',
                       fontWeight:'bold',  
                       height: '500px' }}>
-                      <div style={{ height: '250px', overflow: 'hidden' }}>
-                        <img src={card.imgSrc} className="card-img-top " alt={card.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                      <div style={{ height: '250px', overflow: 'hidden',backgroundColor:'#05042A' }}>
+                        <img src={card.imgSrc} className="card-img-top border" alt={card.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                       </div>
-                      <div className="card-body">
-                        <h5 className="card-title " style={{}}>{card.title}</h5>
+                      <div >
+                        <h5 className="card-title " style={{fontWeight:'bold'}}>{card.title}</h5>
                       </div>
                     </div>
+                    
                   </div>
                   {/* Back of the card */}
                   <div className="flip-card-back">
@@ -185,6 +186,7 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
+                  
                 </div>
               </div>
             </div>
