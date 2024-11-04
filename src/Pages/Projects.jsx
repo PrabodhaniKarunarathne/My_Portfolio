@@ -57,7 +57,7 @@ const Projects = () => {
 
   const cardData = [
     {
-      imgSrc: './src/images/Naviguide.png',
+      imgSrc: './Images/Naviguide.png',
       title: 'Naviguide Project',
       text: 'A web-based platform that allows the community to connect Resource persons for Awareness Programs.',
       technologies: ['React', 'Spring', 'Java', 'MongoDB'],
