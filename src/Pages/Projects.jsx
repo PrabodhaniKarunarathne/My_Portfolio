@@ -64,7 +64,7 @@ const Projects = () => {
       githubLink: 'https://github.com/PrabodhaniKarunarathne/Project_NaviGuide.git',
     },
     {
-      imgSrc: './Images/maths.png',
+      imgSrc: './Images/Maths.png',
       title: 'Mathematics Society Web',
       text: 'A web platform for the Mathematics Society to share resources and events.',
       technologies: ['HTML5', 'CSS3', 'PHP', 'JavaScript'],
