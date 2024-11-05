@@ -75,6 +75,18 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+          <img
+            src="/portfolio.png" // Path to logo file in the public folder
+            alt="Logo"
+            style={{
+              height: "40px", // Adjust size as needed
+              marginRight: "20px",
+              cursor: "pointer",
+              opacity:'0.5'
+            }}
+            onClick={() => scrollToSection(new Event('click'), "home")} // Optional: Click to scroll to the top
+            className="ms-auto" // Pushes the logo to the right side
+          />
         </div>
       </nav>
 
