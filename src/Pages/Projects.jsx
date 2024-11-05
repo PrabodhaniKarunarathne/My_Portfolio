@@ -101,7 +101,7 @@ const Projects = () => {
   // Effect to update cards per page based on screen size
   useEffect(() => {
     const handleResize = () => {
-      setCardsPerPage(window.innerWidth < 500 ? 1:window.innerWidth < 768 ? 2 : 3);
+      setCardsPerPage(window.innerWidth < 370 ? 1:window.innerWidth < 768 ? 2 : 3);
     }
 
     // Set initial cards per page
