@@ -76,7 +76,7 @@ const Navbar = () => {
             </ul>
           </div>
           <img
-            src="/portfolio.png" // Path to logo file in the public folder
+            src="./Images/portfolio.png" // Path to logo file in the public folder
             alt="Logo"
             style={{
               height: "40px", // Adjust size as needed
