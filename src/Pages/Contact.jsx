@@ -18,11 +18,11 @@ const ContactForm = () => {
     emailjs.send(serviceID, templateID, data, userID)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        alert('Form submitted successfully!');
+        alert('Email send successfully!');
         reset(); // Reset the form after submission
       })
       .catch((err) => {
-        console.error('Failed to send email:', err);
+        console.error('Failed to send Email:', err);
         alert('There was an error sending your message. Please try again.');
       });
   };
@@ -57,29 +57,29 @@ const ContactForm = () => {
       <div className="container mt-5 d-flex flex-column flex-md-row">
         {/* Contact Form */}
         <div className="col-12 col-md-8 mb-4 mb-md-0">
-          <div className="p-4 border rounded " 
+          <div className="p-4 border rounded  " 
           style={{
             borderColor:'#2F2B7D',
-            background: "linear-gradient(90deg, #2F2B7D, #02011E)"}}>
+            background: "linear-gradient(90deg, #05042A, #3C3898)"}}>
             <h3 className="text-white" style={{fontWeight:'bold'}}>Contact <span style={{color:'#4E4AA1'}}>Me</span></h3>
             <Form onSubmit={handleSubmit(onSubmit)} className="contact-form">
               {/* Name Field */}
-              <Form.Group controlId="formName" className="mb-2">
-                <Form.Label className="" style={{color:'#4E4AA1',fontWeight:'bold'}}>Name</Form.Label>
+              <Form.Group controlId="formName" className="mb-2 ">
+                <Form.Label className="" style={{color:'#807DBC',fontWeight:'bold',textAlign: 'left',display: 'block',marginLeft:'20px'}}>Name</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Enter your name"
                   {...register('name', { required: 'Name is required' })}
                   isInvalid={errors.name}
                   className="p-2 border rounded text-white"
-                  style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
+                  style={{backgroundColor:'rgba(78, 74, 161,0.3)',borderColor:'#2F2B7D'}}
                 />
-                {errors.name && <Alert variant="danger">{errors.name.message}</Alert>}
+                {errors.name && <Alert variant="danger" className="custom-alert">{errors.name.message}</Alert>}
               </Form.Group>
 
               {/* Email Field */}
               <Form.Group controlId="formEmail" className="mb-2">
-                <Form.Label className="" style={{color:'#4E4AA1',fontWeight:'bold'}}>Email</Form.Label>
+                <Form.Label className="" style={{color:'#807DBC',fontWeight:'bold',textAlign: 'left',display: 'block',marginLeft:'20px'}}>Email</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter your email"
@@ -89,15 +89,15 @@ const ContactForm = () => {
                   })}
                   isInvalid={errors.email}
                   className="p-2 border rounded text-white"
-                  style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
+                  style={{backgroundColor:'rgba(78, 74, 161,0.3)',borderColor:'#2F2B7D'}}
 
                 />
-                {errors.email && <Alert variant="danger">{errors.email.message}</Alert>}
+                {errors.email && <Alert variant="danger" className="custom-alert">{errors.email.message}</Alert>}
               </Form.Group>
 
               {/* Phone Number Field */}
               <Form.Group controlId="formPhone" className="mb-2">
-                <Form.Label className="" style={{color:'#4E4AA1',fontWeight:'bold'}}>Phone Number</Form.Label>
+                <Form.Label className="" style={{color:'#807DBC',fontWeight:'bold',textAlign: 'left',display: 'block',marginLeft:'20px'}}>Phone Number</Form.Label>
                 <Form.Control
                   type="tel"
                   placeholder="Enter your phone number"
@@ -110,15 +110,15 @@ const ContactForm = () => {
                   })}
                   isInvalid={errors.phone}
                   className="p-2 border rounded text-white"
-                  style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
+                  style={{backgroundColor:'rgba(78, 74, 161,0.3)',borderColor:'#2F2B7D'}}
 
                 />
-                {errors.phone && <Alert variant="danger">{errors.phone.message}</Alert>}
+                {errors.phone && <Alert variant="danger" className="custom-alert">{errors.phone.message}</Alert>}
               </Form.Group>
 
               {/* Message Field */}
               <Form.Group controlId="formMessage" className="mb-2">
-                <Form.Label className="" style={{color:'#4E4AA1',fontWeight:'bold'}}>Message</Form.Label>
+                <Form.Label className="" style={{color:'#807DBC',fontWeight:'bold',textAlign: 'left',display: 'block',marginLeft:'20px'}}>Message</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={5}
@@ -126,14 +126,14 @@ const ContactForm = () => {
                   {...register('message', { required: 'Message is required' })}
                   isInvalid={errors.message}
                   className="p-2 border rounded text-white"
-                  style={{backgroundColor:'rgba(78, 74, 161,0.2)',borderColor:'#2F2B7D'}}
+                  style={{backgroundColor:'rgba(78, 74, 161,0.3)',borderColor:'#2F2B7D'}}
 
                 />
-                {errors.message && <Alert variant="danger">{errors.message.message}</Alert>}
+                {errors.message && <Alert variant="danger" className="custom-alert">{errors.message.message}</Alert>}
               </Form.Group>
 
               <Button
-                className="btn-custom rounded"
+                className="btn-custom rounded "
                 // variant="success"
                 type="submit"
                 // style={{ backgroundColor: '#558767', color: 'white' }} // Apply custom background color

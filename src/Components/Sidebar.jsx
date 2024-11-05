@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg navbar-dark border border-#011E19 rounded text-align-center"
+        className="navbar navbar-expand-lg navbar-dark border  rounded text-align-center"
         style={{
           background: "linear-gradient(90deg,#2F2B7D, #040324 )", // Gradient background
           position: "fixed",
@@ -21,7 +21,8 @@ const Navbar = () => {
           left:'5%',
           width: "90%",
           zIndex: "1000",
-          border:'12px'
+          border:'12px',
+          borderColor:'#4E4AA1'
         }}
       >
         <div className="container-fluid">

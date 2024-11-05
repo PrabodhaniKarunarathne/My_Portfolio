@@ -10,5 +10,10 @@
   .footer{
     align-items: center;
   }
-
+  .custom-alert {
+    background-color: #2F2B7D !important; /* Custom background color */
+    color: #02011E !important; /* Custom text color */
+    border: 1px solid #e109f5 !important; /* Border color for better contrast */
+  }
+  
  

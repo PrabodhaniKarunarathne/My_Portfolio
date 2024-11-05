@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImage from '../images/my.jpg'; // Adjust the path based on your project structure
+import profileImage from '../images/myprofile.jpg'; // Adjust the path based on your project structure
 import backgroundImg from '../images/—Pngtree—technology network digital diagram geometric_9000623.png';
 import './Home.css'; 
 
@@ -15,15 +15,15 @@ const Home = () => {
             <img 
               src={profileImage}
               alt="Profile" 
-              className="rounded-circle img-fluid "
+              className="rounded-circle border img-fluid "
               style={{ width: '300px', height: '300px', objectFit: 'cover' }}
             />
              <p className="mt-3">
               <h6>
-            <span className="mt-5" style={{ color: '#4E4AA1' }}>{"<"}SOFTWARE DEVELOPER{" />"}</span> <br></br>
-              <span className="mt-5" style={{ color: '#3C3898' }}>{"<"}WEB DEVELOPER{" />"}</span> <br></br>
-              <span className="mt-5" style={{ color: '#4E4AA1' }}>{"<"}UI/UX DESIGNER{" />"}</span><br></br>
-              <span className="mt-5" style={{ color: '#3C3898' }}>{"<"}GRAPHIC DESIGNER{" />"}</span> 
+            <span className="mt-5" style={{ color: '#605DA0' }}>{"<"}SOFTWARE DEVELOPER{" />"}</span> <br></br>
+              <span className="mt-5" style={{ color: '#6A66B0' }}>{"<"}WEB DEVELOPER{" />"}</span> <br></br>
+              <span className="mt-5" style={{ color: '#6D69B2' }}>{"<"}UI/UX DESIGNER{" />"}</span><br></br>
+              <span className="mt-5" style={{ color: '#7470B6' }}>{"<"}GRAPHIC DESIGNER{" />"}</span> 
               </h6>
             </p>    
                            
@@ -47,7 +47,7 @@ const Home = () => {
             </h4>
             
             <p className="lead text-muted animate__animated animate__fadeInUp justify-content-end" style={{textAlign:'justify',margin:'20px'}}>
-            <span style={{ color: '#4E4AA1' }}>“I’m a passionate software engineer with expertise in full-stack web and mobile development, graphic design, and problem-solving. I create impactful software solutions using modern technologies and frameworks, and I’m always eager to explore new challenges and innovate in the field.”</span>
+            <span style={{ color: '#807DBC' }}>“I’m a passionate software engineer with expertise in full-stack web and mobile development, graphic design, and problem-solving. I create impactful software solutions using modern technologies and frameworks, and I’m always eager to explore new challenges and innovate in the field.”</span>
             </p>
           </div>
           </div>

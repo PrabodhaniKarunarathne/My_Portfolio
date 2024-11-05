@@ -15,7 +15,7 @@ const MyServices = () => {
     size = 7,
     speed = 5,
     parts = new Array(),
-    colors = ['#1B3A4B', '#212F45', '#144552', '#272640', '#312244'];
+    colors = ['#605DA0', '#6A66B0', '#6D69B2', '#7470B6', '#7A77B9'];
   const mouse = { x: 0, y: 0 };
 
   // Resize listener for responsiveness
@@ -165,8 +165,8 @@ const MyServices = () => {
                         {service.icon}
                       </div>
                     </div>
-                    <h5 className="card-title" style={{ color: '#2F2B7D', fontWeight: 'bold' }}>{service.title}</h5>
-                    <p className="card-text" style={{ color: '#4E4AA1' }}>{service.description}</p>
+                    <h5 className="card-title" style={{ color: '#807DBC', fontWeight: 'bold' }}>{service.title}</h5>
+                    <p className="card-text" style={{ color: '#7470B6' }}>{service.description}</p>
                   </div>
                 </div>
               </div>

@@ -49,6 +49,7 @@ const Skills = () => {
         borderRadius: '10px',
         margin:'0',
         padding:'2%',
+        bordercolor:'#7470B6'
        
     };
 
@@ -96,15 +97,15 @@ const Skills = () => {
               <div className="row mt-3">
                     <div className="col-md-6">
                     <div className="card border mt-3 " style={cardStyle}>
-                    <h5 style={{textAlign:'start',fontWeight:'bold',color:'#4E4AA1'}}>Programming Languages</h5>
-                    <p style={{textAlign:'start',color:'#3C3898'}}><b>Core Languages:</b> JavaScript, Python, Java, PHP, C#, Kotlin <br></br> <b>Markup & Styling:</b> HTML, CSS</p>
+                    <h5 style={{textAlign:'start',fontWeight:'bold',color:'#807DBC'}}>Programming Languages</h5>
+                    <p style={{textAlign:'start',color:'#7470B6'}}><b>Core Languages:</b> JavaScript, Python, Java, PHP, C#, Kotlin <br></br> <b>Markup & Styling:</b> HTML, CSS</p>
                     </div>              
                     </div>
 
                     <div className="col-md-6">
                     <div className="card border mt-3 " style={cardStyle}>
-                    <h5 style={{textAlign:'start',color:'#4E4AA1',fontWeight:'bold'}}>Frontend Frameworks & Libraries</h5>
-                    <p style={{textAlign:'start',color:'#3C3898'}}> <b>JavaScript Frameworks:</b> React, Vite <br></br><b>Styling Libraries:</b> Bootstrap, TailwindCSS  </p>
+                    <h5 style={{textAlign:'start',color:'#807DBC',fontWeight:'bold'}}>Frontend Frameworks & Libraries</h5>
+                    <p style={{textAlign:'start',color:'#7470B6'}}> <b>JavaScript Frameworks:</b> React, Vite <br></br><b>Styling Libraries:</b> Bootstrap, TailwindCSS  </p>
                     </div>
                     </div>
               </div>
@@ -112,15 +113,15 @@ const Skills = () => {
               <div className="row mt-3">
                   <div className="col-md-6">
                   <div className="card border mt-3 " style={cardStyle}>
-                  <h5 style={{textAlign:'start',color:'#4E4AA1',fontWeight:'bold'}}>Backend Frameworks & Libraries</h5>
-                  <p style={{textAlign:'start',color:'#3C3898'}}><b>Core Backend:</b> Node.js, .NET, Spring (Java)  <br></br><b>Data Handling:</b> MySQL, MongoDB, Oracle</p>
+                  <h5 style={{textAlign:'start',color:'#807DBC',fontWeight:'bold'}}>Backend Frameworks & Libraries</h5>
+                  <p style={{textAlign:'start',color:'#7470B6'}}><b>Core Backend:</b> Node.js, .NET, Spring (Java)  <br></br><b>Data Handling:</b> MySQL, MongoDB, Oracle</p>
                   </div>
                   </div>
 
                   <div className="col-md-6">
                   <div className="card border mt-3 " style={cardStyle}>
-                  <h5 style={{textAlign:'start',color:'#4E4AA1',fontWeight:'bold'}}>Design & Prototyping Tools</h5>
-                  <p style={{textAlign:'start',color:'#3C3898'}}><b>Design:</b> Adobe Photoshop, Adobe Illustrator, CorelDraw  <br></br><b>UI/UX Prototyping:</b> Adobe XD, Figma</p>
+                  <h5 style={{textAlign:'start',color:'#807DBC',fontWeight:'bold'}}>Design & Prototyping Tools</h5>
+                  <p style={{textAlign:'start',color:'#7470B6'}}><b>Design:</b> Adobe Photoshop, Adobe Illustrator, CorelDraw  <br></br><b>UI/UX Prototyping:</b> Adobe XD, Figma</p>
                   </div>
                   </div>
               </div>
@@ -128,8 +129,8 @@ const Skills = () => {
               <div className="row mt-3">
                   <div className="col-md-6 offset-md-3">
                   <div className="card border mt-3 " style={cardStyle}>
-                  <h5 style={{textAlign:'start',color:'#4E4AA1',fontWeight:'bold'}}>DevOps & Tools</h5>
-                  <p style={{textAlign:'start',color:'#3C3898'}}><b>Version Control:</b> Git, GitHub<br></br><b>Containerization:</b> Docker <br></br><b>Build Tools:</b> Vite</p>
+                  <h5 style={{textAlign:'start',color:'#807DBC',fontWeight:'bold'}}>DevOps & Tools</h5>
+                  <p style={{textAlign:'start',color:'#7470B6'}}><b>Version Control:</b> Git, GitHub<br></br><b>Containerization:</b> Docker <br></br><b>Build Tools:</b> Vite</p>
                   </div>                  
                   </div>
                   </div>

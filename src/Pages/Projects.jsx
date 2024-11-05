@@ -150,14 +150,14 @@ const Projects = () => {
                     <div className="card h-100  animated-border" 
                     style={{ backgroundColor: 'rgba(2, 1, 30,0.1)', 
                       borderRadius: '0.5rem',
-                      color:'#02011E',
+                      color:'#807DBC',
                       fontWeight:'bold',  
                       height: '500px' }}>
-                      <div style={{ height: '250px', overflow: 'hidden',backgroundColor:'#05042A' }}>
+                      <div style={{ height: '250px', overflow: 'hidden',backgroundColor:'rgba(5, 4, 42,0.8)' }}>
                         <img src={card.imgSrc} className="card-img-top border" alt={card.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                       </div>
                       <div >
-                        <h5 className="card-title " style={{fontWeight:'bold'}}>{card.title}</h5>
+                        <h5 className="card-title mt-2 " style={{fontWeight:'bold'}}>{card.title}</h5>
                       </div>
                     </div>
                     
@@ -166,10 +166,10 @@ const Projects = () => {
                   <div className="flip-card-back">
                     <div className="card h-100  animated-border" style={{ backgroundColor: '#4E4AA1', borderRadius: '0.5rem',  height: '500px' }}>
                       <div className="card-body">
-                        <h5 className="card-title " style={{color:'#02011E',fontWeight:'bold'}}>{card.title}</h5>
-                        <p className="card-text" style={{color:'#02011E'}}>{card.text}</p>
+                        <h5 className="card-title " style={{color:'#807DBC',fontWeight:'bold'}}>{card.title}</h5>
+                        <p className="card-text" style={{color:'#7470B6'}}>{card.text}</p>
                         <div className="card-technologies mt-1 text-center">
-                          <h6 className="" style={{color:'#02011E',fontWeight:'bold'}}>Technologies Used:</h6>
+                          <h6 className="" style={{color:'#7A77B9',fontWeight:'bold'}}>Technologies Used:</h6>
                           <div className="d-flex justify-content-center flex-wrap">
                             {card.technologies.map((tech, idx) => (
                               <span key={idx} className="tech-icon me-2" style={{  margin: '0.2rem' }}>

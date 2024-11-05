@@ -40,7 +40,7 @@ const About = () => {
     opacity: 0.5,
     zIndex: 1,
     animationName: 'AboutBackgroundAnimation',
-    animationDuration: '10s',
+    animationDuration: '20s',
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',
   };
@@ -55,12 +55,13 @@ const About = () => {
             
             {/* Column 1 - Card 1 */}
             <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mt-5">
-              <div className="card text-center" style={{
-                 backgroundColor: 'rgba(2, 1, 30,0.6)',
-                 color:'#4E4AA1',
+              <div className="card  text-center" style={{
+                 backgroundColor: 'rgba(2, 1, 30,0.8)',
+                 color:'#807DBC',
                  width: '100%',
                  padding: '0.5rem',
                  position: 'relative',
+                 borderColor:'#4E4AA1'
               }}>
                 <div className="card-overlay">
                   <p><b>Explore My Education</b></p>
@@ -76,11 +77,12 @@ const About = () => {
             {/* Column 2 - Card 2 and Card 3 */}
             <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mt-3">
               <div className="card text-center mb-3" style={{
-                backgroundColor: 'rgba(4, 3, 36,0.6)',
-                color:'#4E4AA1',
+                backgroundColor: 'rgba(4, 3, 36,0.8)',
+                color:'#7A77B9',
                 width: '100%',
                 padding: '0.5rem',
                 position: 'relative',
+                borderColor:'#4E4AA1'
               }}>
                 <div className="card-overlay">
                   <p><b>Creative Graphic Design</b></p>
@@ -92,11 +94,12 @@ const About = () => {
               </div>
 
               <div className="card text-center mb-3" style={{
-                backgroundColor: 'rgba(5, 4, 42,0.6)',
-                color:'#4E4AA1',
+                backgroundColor: 'rgba(5, 4, 42,0.8)',
+                color:'#7470B6',
                 width: '100%',
                 padding: '0.5rem',
                 position: 'relative',
+                borderColor:'#4E4AA1'
               }}>
                 <div className="card-overlay">
                   <p><b>Team Collaboration</b></p>
@@ -111,11 +114,12 @@ const About = () => {
             {/* Column 3 - Card 4 and Card 5 */}
             <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mt-4">
               <div className="card text-center mb-3" style={{
-                backgroundColor: 'rgba(12, 11, 56,0.6)',
-                color:'#4E4AA1',
+                backgroundColor: 'rgba(12, 11, 56,0.8)',
+                color:'#6D69B2',
                 width: '100%',
                 padding: '0.5rem',
                 position: 'relative',
+                borderColor:'#4E4AA1'
               }}>
                 <div className="card-overlay">
                   <p><b>Commitment to Continuous Growth</b></p>
@@ -127,11 +131,12 @@ const About = () => {
               </div>
 
               <div className="card text-center" style={{
-                backgroundColor: 'rgba(19, 17, 70,0.6)',
-                color:'#4E4AA1',
+                backgroundColor: 'rgba(19, 17, 70,0.8)',
+                color:'#6A66B0',
                 width: '100%',
                 padding: '0.5rem',
                 position: 'relative',
+                borderColor:'#4E4AA1'
               }}>
                 <div className="card-overlay">
                   <p><b>Passionate About Development</b></p>
