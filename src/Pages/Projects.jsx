@@ -50,7 +50,7 @@ const Projects = () => {
     backgroundRepeat: 'repeat-x',
     backgroundPosition: '0 20%, 0 100%, 0 50%, 0 100%, 0 0',
     backgroundSize: '700px, 800px, 500px 200px, 1000px, 400px 260px',
-    opacity: 0.2,
+    opacity: 0.5,
     zIndex: 1,
     animation: 'PBackgroundAnimation 20s infinite linear',
   };
