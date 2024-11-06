@@ -46,9 +46,12 @@ const Home = () => {
                 </p>
             </h4>
             
-            <p className="lead text-muted animate__animated animate__fadeInUp justify-content-end" style={{textAlign:'justify',margin:'20px'}}>
-            <span style={{ color: '#807DBC' }}>“I’m a passionate software engineer with expertise in full-stack web and mobile development, graphic design, and problem-solving. I create impactful software solutions using modern technologies and frameworks, and I’m always eager to explore new challenges and innovate in the field.”</span>
-            </p>
+            <h6 className="lead  animate__animated animate__fadeInUp justify-content-end" style={{textAlign:'justify',margin:'20px', color: '#807DBC'}}>
+            “I’m a passionate software engineer with expertise in full-stack web
+               and mobile development, graphic design, and problem-solving. I create impactful software solutions 
+               using modern technologies and frameworks, and I’m always eager to explore new challenges and innovate 
+               in the field.”
+            </h6>
           </div>
           </div>
         </div>
