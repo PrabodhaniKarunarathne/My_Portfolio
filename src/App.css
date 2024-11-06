@@ -86,7 +86,7 @@ html {
 .section {
   padding-left: 0%;
   margin: 0;
-  height: 100vh; /* Make each section take up the full viewport height */
+  height: 100%; /* Make each section take up the full viewport height */
   
 }
 
@@ -150,7 +150,7 @@ html {
  
   
   background-color:#02011E;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
 }
 
 .divSection{
