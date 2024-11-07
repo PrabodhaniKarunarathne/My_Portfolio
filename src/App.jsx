@@ -9,6 +9,7 @@ import Contact from './Pages/Contact';
 import Projects from './Pages/Projects';
 // import Resume from './Pages/Resume';
 import MyServices from './Pages/MyServices';
+import ProjectsPage from './Pages/ProjectsPage';
 
 
 
@@ -53,7 +54,7 @@ const App = () => {
 
             {/* Projects Section */}
             <section id="projects" className="section">
-              <Projects/> 
+              <ProjectsPage/> 
             </section>
 
             {/* Resume Section

@@ -1,0 +1,161 @@
+/* Background Animation */
+.projects-background {
+    background-color: #02011E;
+    /* background: linear-gradient(45deg, #02011E, #040324, #05042A); */
+    /* background-size: 600% 600%; */
+    animation: gradientAnimation 15s ease infinite;
+    padding: 4rem 0;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Project Section */
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+    /* padding: 2rem; */
+    z-index: 100000;
+    
+  }
+  
+  .projects-title {
+    
+    z-index: 100;
+  }
+  
+  /* Card Styling */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    z-index: 100;
+  }
+  
+  .flip-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .flip-card-front {
+    /* background: linear-gradient(120deg, #3C3898, #02011E); */
+    background: rgba(2, 1, 30,0.8);
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(120deg, #02011E, #3C3898);
+    color: #FFF;
+    transform: rotateY(180deg);
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border:  1px solid #4E4AA1;
+    background-color: #02011E;
+    /* margin-bottom: 2rem; */
+    /* padding-bottom: 1rem; */
+    /* background-image: 'url('./Images/—Pngtree—network data globe blue _4945702.png')'; */
+  }
+  
+  /* Pagination */
+  .pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: #FFFFFF;
+    z-index: 100;
+  }
+  
+  .pagination button {
+    background-color: #131146;
+    color: #807DBC;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination button:hover {
+    color: #02011E; /* Font color on hover */
+    background-color: #211E61; /* Background color on hover */
+    border-color: #02011E; /* Border color on hover */
+    font-weight: bold;
+    border-width: 2px;
+  }
+  
+  .pagination span {
+    align-self: center;
+  }
+  
+  /* Animation for sliding from left to right */
+@keyframes slide-left {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Animation for sliding from right to left */
+  @keyframes slide-right {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Apply the animations */
+  .card-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .card-container.slide-left {
+    animation: slide-left 0.5s forwards;
+  }
+  
+  .card-container.slide-right {
+    animation: slide-right 0.5s forwards;
+  }
+  
