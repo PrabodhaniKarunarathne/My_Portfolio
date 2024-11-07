@@ -128,7 +128,7 @@ const ProjectsPage = () => {
     right: 0,
     bottom: 0,
     overflow: 'hidden',
-    backgroundImage: `url('./Images/—Pngtree—network data globe blue _4945702.png')`,
+    backgroundImage: `url('./Images/network.png')`,
     backgroundRepeat: 'repeat-x',
     backgroundPosition: '0 20%, 0 100%, 0 50%, 0 100%, 0 0',
     backgroundSize: '1000px',
