@@ -18,11 +18,9 @@ const MyServices = () => {
     colors = ['#605DA0', '#6A66B0', '#6D69B2', '#7470B6', '#7A77B9'];
   const mouse = { x: 0, y: 0 };
 
-  // Resize listener for responsiveness
   useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth <= 768);
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -49,7 +47,6 @@ const MyServices = () => {
 
     const drawParticles = () => {
       ctx.clearRect(0, 0, w, h);
-
       for (let i = 0; i < arc; i++) {
         const li = parts[i];
         let distanceFactor = distanceBetween(mouse, parts[i]);
@@ -86,7 +83,7 @@ const MyServices = () => {
       return Math.sqrt(dx * dx + dy * dy);
     };
 
-    const handleResize = () => {
+    const resizeCanvas = () => {
       w = window.innerWidth;
       h = window.innerHeight;
       canvas.width = w;
@@ -97,11 +94,11 @@ const MyServices = () => {
     drawParticles();
 
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', resizeCanvas);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', resizeCanvas);
     };
   }, [arc, colors, speed]);
 
@@ -129,7 +126,7 @@ const MyServices = () => {
   ];
 
   const containerStyle = {
-    minHeight: '100vh',
+    minHeight: '100%',
     backgroundColor: '#02011E',
     position: 'relative',
     overflow: 'hidden',
@@ -138,19 +135,16 @@ const MyServices = () => {
   const contentWrapperStyle = {
     position: 'relative',
     zIndex: 2,
-    ...(isSmallScreen && {
-      maxHeight: '100vh',
-      overflowY: 'auto',
-    }),
   };
 
   return (
     <div style={containerStyle}>
       <canvas ref={canvasRef} id="background-canvas" />
-
       <div style={contentWrapperStyle}>
         <div className="container mt-5 text-white">
-          <h1 className="services-title" style={{fontWeight:'bold'}}>What <span style={{color:'#4E4AA1'}}>I</span> <span style={{color:'#3C3898'}}>Do</span></h1>
+          <h1 className="services-title" style={{ fontWeight: 'bold' }}>
+            What <span style={{ color: '#4E4AA1' }}>I</span> <span style={{ color: '#3C3898' }}>Do</span>
+          </h1>
           <div className="row justify-content-center">
             {servicesData.map((service, index) => (
               <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5" key={index}>
@@ -161,9 +155,7 @@ const MyServices = () => {
                   <span></span>
                   <div className="card-body border">
                     <div className="service-icon-container">
-                      <div className="service-icon">
-                        {service.icon}
-                      </div>
+                      <div className="service-icon">{service.icon}</div>
                     </div>
                     <h5 className="card-title" style={{ color: '#807DBC', fontWeight: 'bold' }}>{service.title}</h5>
                     <p className="card-text" style={{ color: '#7470B6' }}>{service.description}</p>
