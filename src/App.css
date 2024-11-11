@@ -116,7 +116,7 @@ html {
 
  
 #about {
- 
+  /* padding-top: 5%;  */
   margin-left: 0%;
   background-color: #02011E;
   
@@ -148,7 +148,7 @@ html {
 
 #contact {
  
-  
+  padding-top: 2%;
   background-color:#02011E;
   /* margin-bottom: 10%; */
 }

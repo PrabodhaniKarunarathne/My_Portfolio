@@ -39,7 +39,7 @@ const Skills = () => {
       const containerStyle = {
         position: 'relative',
         zIndex: 10, // Higher z-index to ensure it's in front
-         marginTop: '1%'
+        padding:'5% 0 1% 0'
     };
 
     const cardStyle = {

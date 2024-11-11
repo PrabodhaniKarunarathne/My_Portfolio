@@ -15,6 +15,7 @@ const About = () => {
     backgroundColor: '#02011E',
     position: 'relative',
     overflow: 'hidden',
+    padding:'2% 0 1% 0'
   };
 
   const contentWrapperStyle = {
@@ -40,6 +41,7 @@ const About = () => {
     animationDuration: '20s',
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',
+    
   };
 
   return (

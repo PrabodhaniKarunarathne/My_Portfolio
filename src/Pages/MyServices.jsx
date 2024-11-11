@@ -130,6 +130,7 @@ const MyServices = () => {
     backgroundColor: '#02011E',
     position: 'relative',
     overflow: 'hidden',
+    padding:'2% 0 0 0'
   };
 
   const contentWrapperStyle = {
@@ -147,7 +148,7 @@ const MyServices = () => {
           </h1>
           <div className="row justify-content-center">
             {servicesData.map((service, index) => (
-              <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mt-5" key={index}>
+              <div className="col-lg-3 col-md-6 col-sm-12  mt-2" key={index}>
                 <div className="card animated-border-card text-center h-100" style={{ zIndex: 2 }}>
                   <span></span>
                   <span></span>
