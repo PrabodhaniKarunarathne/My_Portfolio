@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg navbar-dark border  rounded text-align-center"
+        className="navbar navbar-expand-lg navbar-dark   rounded text-align-center"
         style={{
           background: "linear-gradient(90deg,#2F2B7D, #040324 )", // Gradient background
           position: "fixed",
